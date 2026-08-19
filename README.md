@@ -41,6 +41,7 @@ mfpvector/
 │   ├── rq1_massbalance.py      # Monte Carlo mass-balance bound (seed 20260710) + Spearman sensitivity
 │   ├── analyze_rq2.py          # adsorption interaction-energy analysis (means, CI, effect sizes)
 │   ├── make_figures.py         # regenerates the adsorption 4-panel figure (manuscript Fig 3) from data/
+│   ├── make_fig4.py            # regenerates the evidence-tier figure (manuscript Fig 4) from data/
 │   ├── batch_run.py            # MD driver that produced data/raw_results.csv
 │   └── emit_md_inputs.py       # re-emits every .mdp / packmol input from batch_run.py
 ├── data/
@@ -77,6 +78,7 @@ python code/analyze_rq2.py
 
 # Regenerate the adsorption figure -> figures/Fig2.pdf (vector) and figures/Fig2.png
 python code/make_figures.py
+python code/make_fig4.py
 
 # Re-emit the GROMACS .mdp and packmol inputs used for the production runs.
 # Parameters are read out of code/batch_run.py with `ast`, not retyped, so the
@@ -117,10 +119,9 @@ Carlo, `7` for the bootstrap), so the numeric outputs are bit-reproducible.
   `rq1_massbalance.py`) derives from a single LDIR reanalysis and is treated
   as a **bounding prior**, not a universal abundance.
 
-### Known gaps (to be completed before the archive is cited as the Data Availability source)
+### Not archived (available from the corresponding author on request)
 
-- Raw GROMACS/MD inputs — topologies, `.mdp` files, `packmol` slab inputs, and the MD
-  driver script — are **not yet included**.
+
 - **ECTFE+PFOA PMF window data (ΔG = −28.5 kJ/mol) is missing**; `pmf_result.json`
   holds the PVDF+PFOA anchor only.
 - The acpype/GAFF2 topologies (`*_GMX.itp`), the polymer and PFAS `.pdb` structures, and
@@ -128,8 +129,11 @@ Carlo, `7` for the bootstrap), so the numeric outputs are bit-reproducible.
   on the exact input geometry, so re-deriving them would not give the files the runs used.
 - The umbrella-sampling window definitions and the `gmx wham` outputs (`profile.xvg`,
   `bsResult.xvg`) for both PMF anchors are **not archived**.
-- The manuscript's Data Availability statement lists GROMACS topologies and umbrella-sampling
-  and WHAM inputs, so the two items above must be added before that statement is accurate.
+- The short-timescale isotonic-saline stability check reported in ESI Section S5 / Table S7
+  has no archived inputs or output.
+
+The manuscript's Data Availability statement lists these items as available from the
+corresponding author on request, not as archived here.
 
 ---
 

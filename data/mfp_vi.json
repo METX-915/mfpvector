@@ -79,6 +79,6 @@
       "VI": 0.654
     }
   ],
-  "note": "MFP-VI=Â_ads(RQ2, min-max 0.05 floor)×Ĥ_receptor(RQ3, ordinal evidence tier: PFOA0.92/FTOH1.0 high, GenX0.46 mid, PFBS0.20 low-but-nonzero from in-vitro PPARα lit). No combination forced to exact zero. P̂_persist~const(불소중합체 고지속성). D̂_desorp=agenda(gut bioaccessibility 미해결). 환경가중=×abundance(RQ1, 입자크기 지배).",
-  "reviewer_fix": "PFBS hard-zero(min-max artifact) → evidence-tier floor 0.20; A_ads 0.05 floor"
+  "note": "MFP-VI = A_ads (RQ2 min-max with a 0.05 floor) x H_receptor (RQ3 ordinal evidence tier). H_receptor is a min-max rescaling of the PPARalpha docking scores with a 0.20 floor for the weakest compound: FTOH 1.00, PFOA 0.92, GenX 0.46, PFBS 0.20. The ordering agrees with published in-vitro PPARalpha data. D_desorp and P_persist are unresolved, so only the A x H evidence tier is reported.",
+  "tier_floor_note": "H_receptor is a min-max rescaling of the docking scores; a plain min-max would force the weakest compound (PFBS) to exactly zero, so a 0.20 evidence-tier floor is applied."
 }

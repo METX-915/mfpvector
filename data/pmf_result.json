@@ -5,6 +5,5 @@
   "delta_G_ads_kJ_per_mol": -13.8,
   "delta_G_ads_kcal_per_mol": -3.3,
   "desorption_barrier_kJ": 16.2,
-  "interpretation": "\uc808\ub300 \u0394G_ads=-13.5 kJ/mol \u226a \uc6d0\uc2dc IE(-64) \u2192 \ud0c8\uc6a9\ub9e4\ud654/\uc5d4\ud2b8\ub85c\ud53c \uc0c1\uc1c4. IE\ub294 \uc0c1\ub300\uc21c\uc704, PMF\uac00 \uc808\ub300\uc575\ucee4. \ubb38\ud5cc \uc2a4\ucf00\uc77c \uc815\ud569=FF\uac80\uc99d.",
-  "reviewer_defense": "\uc0c1\ub300IE\u2260\uc790\uc720\uc5d0\ub108\uc9c0 + FF\uac80\uc99d \ub450 \uacf5\uaca9 \ubc29\uc5b4"
+  "interpretation": "The absolute dG_ads (-13.8 kJ/mol) is far smaller in magnitude than the raw short-range interaction energy (-64 kJ/mol), as expected once desolvation and entropy are included. Interaction energies are used as an ordinal ranking proxy; the PMF provides the absolute free-energy anchor."
 }

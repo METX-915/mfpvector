@@ -2,8 +2,9 @@
 """
 Regenerate the GROMACS/packmol run inputs for the adsorption screen.
 
-These files are NOT hand-written. Every parameter string is extracted
-programmatically (via `ast`) from the archived MD driver `code/batch_run.py`,
+The numeric run constants (COMMON, NPOLY, PROD_NS, BXY, POLYS, PFASS, SEEDS)
+are read programmatically (via `ast`) from the archived MD driver
+`code/batch_run.py`; the .mdp and packmol templates are transcribed from it,
 which is the script that produced `data/raw_results.csv`. Running this script
 therefore reproduces the exact `.mdp` and `packmol` inputs used for the
 production runs, byte for byte.

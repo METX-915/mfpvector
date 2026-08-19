@@ -5,7 +5,8 @@ Input : data/raw_results.csv (polymer,pfas,seed,coulSR,ljSR,totalIE)
 Output: out/experiment_summary.json, out/results_table.csv,
         out/Fig2_adsorption.png
 Stats : bootstrap 95% CI (10000), Cohen's d (MFP vs PE per PFAS), Shapiro→t/Mann-Whitney.
-NOTE  : 절대값 주장 안 함 — 상대순위 + 불확실성. Â_ads = min-max 정규화(더 음수=강흡착=1).
+NOTE  : no absolute claim is made - relative ranking plus uncertainty only.
+        A_ads = min-max normalisation (more negative IE = stronger adsorption = 1).
 """
 import os, json, numpy as np, pandas as pd
 from scipy import stats

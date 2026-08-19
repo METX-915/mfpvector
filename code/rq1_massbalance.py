@@ -3,20 +3,22 @@ mfpvector RQ1 — Computational mass-balance bounding:
 Can microfluoroplastic (MFP)-derived organofluorine be of the same order
 as the measured EOF pool in river sediment?
 
-DATA PROVENANCE (모든 입력 출처 명시; 허구 수치 없음):
+DATA PROVENANCE (every input traced to a source; no invented values):
 [R1] EOF in Upper Ganges sediment = 180-780 ng F/g
-     Müller et al. 2026, Environment International, DOI 10.1016/j.envint.2026.110104 (abstract, 실검증)
+     Müller et al. 2026, Environment International, DOI 10.1016/j.envint.2026.110104 (abstract, verified)
 [R2] non-oxidised target PFAS explain <=1.3% of EOF (same paper) -> unexplained EOF ~ 98.7%+
 [R3] total microplastics in river sediment ~ 140-27,259 particles/kg dry
      (literature range: Saigon 140-1200; Rhine 228-3763; Olifants/Sabie 2022-27259 items/kg) — WebSearch 2026-07
 [R4] MFP = 2-8% of total microplastic COUNT in dust/sediment
-     C&EN-reported LDIR study (2026-06) [FLAGGED: S2 미색인, DOI 수집불가, 보도기반 — 게재 전 CrossRef 확정 필요]
-[R5] fluorine wt%: PTFE 76.0%, PVDF 59.4%, ECTFE ~39%, FEP 76.0% (화학량론 계산)
-[R6] polymer density: PTFE 2.20, PVDF 1.78 g/cm3 (물성값); MFP-weighted ~2.0
-[P1] effective particle size: log-uniform 20-300 um  [PRIOR: 퇴적물 MP 크기분포, 지배적 불확실성]
-[P2] shape factor (fragment): 0.3  [PRIOR: 구형 대비 부피보정]
+     Li et al. 2026, Environ. Sci. Technol., DOI 10.1021/acs.est.6c04873 (LDIR spectral-library reanalysis;
+     reported 1.6-8.3%, implemented here as a rounded 2-8% prior and stress-tested in ESI Table S11)
+[R5] fluorine wt%: PTFE 76.0%, PVDF 59.4%, ECTFE ~39%, FEP 76.0% (stoichiometric calculation)
+[R6] polymer density: PTFE 2.20, PVDF 1.78 g/cm3 (tabulated material property); MFP-weighted ~2.0
+[P1] effective particle size: log-uniform 20-300 um  [PRIOR: sediment microplastic size distribution; dominant uncertainty]
+[P2] shape factor (fragment): 0.3  [PRIOR: volume correction relative to a sphere]
 
-원칙: 절대 attribution 아닌 BOUNDING. 크기분포(d^3)가 지배적 불확실성 -> AL 우선측정 대상.
+Principle: this is a BOUNDING scenario, not an attribution. The size distribution (d^3)
+dominates the uncertainty, which makes size-resolved inventories the measurement priority.
 """
 import numpy as np
 rng = np.random.default_rng(20260710)

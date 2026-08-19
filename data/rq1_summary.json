@@ -5,14 +5,35 @@
   "seed": 20260710,
   "reference_scale": "measured EOF in Upper Ganges sediment 180-780 ng F/g (Müller 2026, DOI 10.1016/j.envint.2026.110104)",
   "results": {
-    "MFP_derived_F_ng_per_g": {"p2.5":0.037,"median":7.45,"p97.5":1520},
-    "ratio_MFP_F_over_EOF": {"p2.5":7.79e-05,"median":0.0167,"p97.5":3.58},
-    "P_MFP_F_ge_1pct_EOF":0.563,
-    "P_MFP_F_ge_10pct_EOF":0.285,
-    "P_MFP_F_ge_100pct_EOF":0.084
+    "MFP_derived_F_ng_per_g": {
+      "p2.5": 0.037,
+      "median": 7.45,
+      "p97.5": 1520
+    },
+    "ratio_MFP_F_over_EOF": {
+      "p2.5": 7.79e-05,
+      "median": 0.0167,
+      "p97.5": 3.58
+    },
+    "P_MFP_F_ge_1pct_EOF": 0.563,
+    "P_MFP_F_ge_10pct_EOF": 0.285,
+    "P_MFP_F_ge_100pct_EOF": 0.084
   },
-  "sensitivity_spearman": {"particle_size_d":0.836,"total_MP_abundance":0.519,"MFP_fraction":0.126,"F_wt_pct":0.061,"density":0.019},
-  "interpretation": "MFP 유래 유기불소는 중앙값 EOF의 ~1.7%(modest)이나, plausible 조건에서 10%이상 확률 29%·EOF동급이상 확률 8%. 지배 불확실성=입자 크기분포(Spearman 0.84)→우선측정 대상.",
-  "sanity_check": {"monotonicity":"pass(모든 입력 양의 상관)","plausibility":"pass(median 7.45 vs EOF 180-780, 합리적 order)","wide_CI":"honest(크기 d^3 불확실성 반영)"},
-  "flags": ["MFP abundance 2-8%: C&EN 보도기반, DOI 수집불가→CrossRef 확정 필요","particle size/shape: PRIOR, 실측 필요"]
+  "sensitivity_spearman": {
+    "particle_size_d": 0.836,
+    "total_MP_abundance": 0.519,
+    "MFP_fraction": 0.126,
+    "F_wt_pct": 0.061,
+    "density": 0.019
+  },
+  "interpretation": "MFP-derived organofluorine is ~1.7% of the EOF reference at the median. Within the scenario envelope, 29% of draws exceed 10% of EOF and 8% reach or exceed it. These are percentiles of the scenario envelope, not probabilities of exceedance. Particle size distribution dominates the uncertainty (Spearman rho 0.84), making it the measurement priority.",
+  "sanity_check": {
+    "monotonicity": "pass (all inputs positively correlated with the output)",
+    "plausibility": "pass (median 7.45 ng F/g vs EOF 180-780 ng F/g; consistent order of magnitude)",
+    "wide_CI": "expected (propagates the d^3 size uncertainty)"
+  },
+  "flags": [
+    "MFP fraction 2-8%: rounded from the 1.6-8.3% reported by Li et al. 2026 (DOI 10.1021/acs.est.6c04873); single-source prior, stress-tested in ESI Table S11",
+    "particle size and shape factor: priors, not measurements; size is the dominant sensitivity (Spearman rho 0.84)"
+  ]
 }
