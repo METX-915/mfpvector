@@ -113,7 +113,8 @@ Carlo, `7` for the bootstrap), so the numeric outputs are bit-reproducible.
   the manuscript.
 - The only statistically significant polymer-level contrast in the analysis as reported
   is **PVDF > PE** (p = 0.004); all other polymer contrasts are descriptive.
-- The MFP-fraction prior (1.6–8.3 %) derives from a single LDIR reanalysis and is treated
+- The MFP-fraction prior (2–8 % of microplastic count, `rng.uniform(0.02, 0.08)` in
+  `rq1_massbalance.py`) derives from a single LDIR reanalysis and is treated
   as a **bounding prior**, not a universal abundance.
 
 ### Known gaps (to be completed before the archive is cited as the Data Availability source)
