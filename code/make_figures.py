@@ -91,7 +91,10 @@ for i, p in enumerate(polymers):
         axc.scatter(x[nz], v[nz], marker=MK[c], s=42, facecolor=BLUE, edgecolor="black",
                     linewidth=0.5, alpha=0.85, zorder=3)
         if z.any():
-            axc.scatter(x[z], v[z], marker=MK[c], s=95, facecolor="none", edgecolor=ORANGE,
+            xz = x[z].copy()
+            if len(xz) > 1:                      # separate co-located zero markers
+                xz = xz.mean() + np.linspace(-0.055, 0.055, len(xz))
+            axc.scatter(xz, v[z], marker=MK[c], s=95, facecolor="none", edgecolor=ORANGE,
                         linewidth=2.0, zorder=4)
     axc.plot([i - 0.34, i + 0.34], [means[i]] * 2, color="black", lw=2.4, zorder=5)
 axc.axhline(0, color=ORANGE, lw=1.2, ls="--")
