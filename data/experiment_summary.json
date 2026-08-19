@@ -1,0 +1,256 @@
+{
+  "n_systems": 16,
+  "seeds_per_system": 5,
+  "sanity": {
+    "all_adsorptive(meanIE<0)": true,
+    "PE_baseline_present": true
+  },
+  "systems": [
+    {
+      "polymer": "PTFE",
+      "pfas": "PFOA",
+      "n": 5,
+      "meanIE": -33.4556,
+      "ci_lo": -41.744,
+      "ci_hi": -23.451599999999996,
+      "sd": 11.946919469051426,
+      "A_ads_norm": 0.28311871350660484
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "PFBS",
+      "n": 5,
+      "meanIE": -20.519,
+      "ci_lo": -21.612000000000002,
+      "ci_hi": -19.426,
+      "sd": 1.4075471572917202,
+      "A_ads_norm": 0.0
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "GenX",
+      "n": 5,
+      "meanIE": -26.294,
+      "ci_lo": -27.64562,
+      "ci_hi": -25.269,
+      "sd": 1.6156285154700631,
+      "A_ads_norm": 0.12638642073656475
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "FTOH62",
+      "n": 5,
+      "meanIE": -50.4142,
+      "ci_lo": -53.6462,
+      "ci_hi": -46.9886,
+      "sd": 4.33864364750091,
+      "A_ads_norm": 0.6542592770915584
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "PFOA",
+      "n": 5,
+      "meanIE": -64.26559999999999,
+      "ci_lo": -69.362055,
+      "ci_hi": -58.08934500000004,
+      "sd": 7.294438381397159,
+      "A_ads_norm": 0.9573984750466149
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "PFBS",
+      "n": 5,
+      "meanIE": -53.071000000000005,
+      "ci_lo": -62.86319999999999,
+      "ci_hi": -43.1758,
+      "sd": 12.646265160117434,
+      "A_ads_norm": 0.7124035961587282
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "GenX",
+      "n": 5,
+      "meanIE": -55.1272,
+      "ci_lo": -68.0522,
+      "ci_hi": -46.8774,
+      "sd": 14.0457593671542,
+      "A_ads_norm": 0.7574037274692951
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "FTOH62",
+      "n": 5,
+      "meanIE": -65.3152,
+      "ci_lo": -73.9058,
+      "ci_hi": -56.724599999999995,
+      "sd": 11.12048632929334,
+      "A_ads_norm": 0.9803690702336452
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "PFOA",
+      "n": 5,
+      "meanIE": -66.21220000000001,
+      "ci_lo": -79.48740000000001,
+      "ci_hi": -51.3534,
+      "sd": 18.208990559610932,
+      "A_ads_norm": 1.0
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "PFBS",
+      "n": 5,
+      "meanIE": -31.751600000000003,
+      "ci_lo": -45.8402,
+      "ci_hi": -15.6892,
+      "sd": 20.43704496251843,
+      "A_ads_norm": 0.24582651247888093
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "GenX",
+      "n": 5,
+      "meanIE": -39.183400000000006,
+      "ci_lo": -43.8286,
+      "ci_hi": -31.560000000000002,
+      "sd": 8.40064407054602,
+      "A_ads_norm": 0.40847215778277735
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "FTOH62",
+      "n": 5,
+      "meanIE": -65.5844,
+      "ci_lo": -74.7868,
+      "ci_hi": -56.38199999999999,
+      "sd": 11.798769440072977,
+      "A_ads_norm": 0.9862605376730015
+    },
+    {
+      "polymer": "PE",
+      "pfas": "PFOA",
+      "n": 5,
+      "meanIE": -49.943400000000004,
+      "ci_lo": -67.33619999999999,
+      "ci_hi": -24.0668,
+      "sd": 28.901329922686948,
+      "A_ads_norm": 0.6439557746010347
+    },
+    {
+      "polymer": "PE",
+      "pfas": "PFBS",
+      "n": 5,
+      "meanIE": -37.7042,
+      "ci_lo": -41.0516,
+      "ci_hi": -34.407000000000004,
+      "sd": 4.420279934574281,
+      "A_ads_norm": 0.3760997259986168
+    },
+    {
+      "polymer": "PE",
+      "pfas": "GenX",
+      "n": 5,
+      "meanIE": -25.074399999999997,
+      "ci_lo": -43.651199999999996,
+      "ci_hi": -6.4976,
+      "sd": 23.59524484509538,
+      "A_ads_norm": 0.09969535948456221
+    },
+    {
+      "polymer": "PE",
+      "pfas": "FTOH62",
+      "n": 4,
+      "meanIE": -58.46075,
+      "ci_lo": -61.5095,
+      "ci_hi": -53.099999999999994,
+      "sd": 5.402547323562594,
+      "A_ads_norm": 0.8303587842392302
+    }
+  ],
+  "effect_sizes_vs_PE": [
+    {
+      "polymer": "PTFE",
+      "pfas": "PFOA",
+      "cohens_d": 0.7455980831789275,
+      "test": "t-test",
+      "p_value": 0.288390368742648
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "PFBS",
+      "cohens_d": 5.238992929875888,
+      "test": "t-test",
+      "p_value": 0.0005069455471412904
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "GenX",
+      "cohens_d": -0.07292764833826844,
+      "test": "t-test",
+      "p_value": 0.9137080374662382
+    },
+    {
+      "polymer": "PTFE",
+      "pfas": "FTOH62",
+      "cohens_d": 1.6682239901318503,
+      "test": "t-test",
+      "p_value": 0.053711044829483856
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "PFOA",
+      "cohens_d": -0.6795118989933056,
+      "test": "Mann-Whitney",
+      "p_value": 0.5476190476190477
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "PFBS",
+      "cohens_d": -1.6222069569949926,
+      "test": "t-test",
+      "p_value": 0.05069470851020078
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "GenX",
+      "cohens_d": -1.547778511358952,
+      "test": "t-test",
+      "p_value": 0.0467914311876338
+    },
+    {
+      "polymer": "PVDF",
+      "pfas": "FTOH62",
+      "cohens_d": -0.7515827403425039,
+      "test": "t-test",
+      "p_value": 0.2712978337002905
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "PFOA",
+      "cohens_d": -0.6735381808057463,
+      "test": "t-test",
+      "p_value": 0.32353470070007834
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "PFBS",
+      "cohens_d": 0.4026018992856794,
+      "test": "t-test",
+      "p_value": 0.5562094741326955
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "GenX",
+      "cohens_d": -0.7966569918486046,
+      "test": "Mann-Whitney",
+      "p_value": 0.834035229790992
+    },
+    {
+      "polymer": "ECTFE",
+      "pfas": "FTOH62",
+      "cohens_d": -0.7424576271490293,
+      "test": "t-test",
+      "p_value": 0.2759466372318124
+    }
+  ]
+}

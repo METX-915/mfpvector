@@ -1,0 +1,84 @@
+{
+  "A_ads": {
+    "PTFE": {
+      "PFOA": 0.283,
+      "PFBS": 0.05,
+      "GenX": 0.126,
+      "FTOH62": 0.654
+    },
+    "PVDF": {
+      "PFOA": 0.957,
+      "PFBS": 0.712,
+      "GenX": 0.757,
+      "FTOH62": 0.98
+    },
+    "ECTFE": {
+      "PFOA": 1.0,
+      "PFBS": 0.246,
+      "GenX": 0.408,
+      "FTOH62": 0.986
+    },
+    "PE": {
+      "PFOA": 0.644,
+      "PFBS": 0.376,
+      "GenX": 0.1,
+      "FTOH62": 0.83
+    }
+  },
+  "H_receptor": {
+    "PFOA": 0.92,
+    "PFBS": 0.2,
+    "GenX": 0.46,
+    "FTOH62": 1.0
+  },
+  "MFP_VI": {
+    "PTFE": {
+      "PFOA": 0.26,
+      "PFBS": 0.01,
+      "GenX": 0.058,
+      "FTOH62": 0.654
+    },
+    "PVDF": {
+      "PFOA": 0.88,
+      "PFBS": 0.142,
+      "GenX": 0.348,
+      "FTOH62": 0.98
+    },
+    "ECTFE": {
+      "PFOA": 0.92,
+      "PFBS": 0.049,
+      "GenX": 0.188,
+      "FTOH62": 0.986
+    },
+    "PE": {
+      "PFOA": 0.592,
+      "PFBS": 0.075,
+      "GenX": 0.046,
+      "FTOH62": 0.83
+    }
+  },
+  "top_combos": [
+    {
+      "combo": "ECTFE+FTOH62",
+      "VI": 0.986
+    },
+    {
+      "combo": "PVDF+FTOH62",
+      "VI": 0.98
+    },
+    {
+      "combo": "ECTFE+PFOA",
+      "VI": 0.92
+    },
+    {
+      "combo": "PVDF+PFOA",
+      "VI": 0.881
+    },
+    {
+      "combo": "PTFE+FTOH62",
+      "VI": 0.654
+    }
+  ],
+  "note": "MFP-VI=Â_ads(RQ2, min-max 0.05 floor)×Ĥ_receptor(RQ3, ordinal evidence tier: PFOA0.92/FTOH1.0 high, GenX0.46 mid, PFBS0.20 low-but-nonzero from in-vitro PPARα lit). No combination forced to exact zero. P̂_persist~const(불소중합체 고지속성). D̂_desorp=agenda(gut bioaccessibility 미해결). 환경가중=×abundance(RQ1, 입자크기 지배).",
+  "reviewer_fix": "PFBS hard-zero(min-max artifact) → evidence-tier floor 0.20; A_ads 0.05 floor"
+}

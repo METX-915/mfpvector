@@ -1,0 +1,18 @@
+{
+  "module": "RQ1_massbalance_bounding",
+  "run_date": "2026-07-10",
+  "n_draws": 200000,
+  "seed": 20260710,
+  "reference_scale": "measured EOF in Upper Ganges sediment 180-780 ng F/g (Müller 2026, DOI 10.1016/j.envint.2026.110104)",
+  "results": {
+    "MFP_derived_F_ng_per_g": {"p2.5":0.037,"median":7.45,"p97.5":1520},
+    "ratio_MFP_F_over_EOF": {"p2.5":7.79e-05,"median":0.0167,"p97.5":3.58},
+    "P_MFP_F_ge_1pct_EOF":0.563,
+    "P_MFP_F_ge_10pct_EOF":0.285,
+    "P_MFP_F_ge_100pct_EOF":0.084
+  },
+  "sensitivity_spearman": {"particle_size_d":0.836,"total_MP_abundance":0.519,"MFP_fraction":0.126,"F_wt_pct":0.061,"density":0.019},
+  "interpretation": "MFP 유래 유기불소는 중앙값 EOF의 ~1.7%(modest)이나, plausible 조건에서 10%이상 확률 29%·EOF동급이상 확률 8%. 지배 불확실성=입자 크기분포(Spearman 0.84)→우선측정 대상.",
+  "sanity_check": {"monotonicity":"pass(모든 입력 양의 상관)","plausibility":"pass(median 7.45 vs EOF 180-780, 합리적 order)","wide_CI":"honest(크기 d^3 불확실성 반영)"},
+  "flags": ["MFP abundance 2-8%: C&EN 보도기반, DOI 수집불가→CrossRef 확정 필요","particle size/shape: PRIOR, 실측 필요"]
+}

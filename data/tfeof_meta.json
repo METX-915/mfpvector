@@ -1,0 +1,71 @@
+{
+  "gapB_EOF_pct_of_total_fluorine_REALreported": [
+    {
+      "study": "Willach 2020",
+      "matrix": "River water",
+      "ratio": "EOF/TF",
+      "lo": 0.04,
+      "hi": 0.28,
+      "doi": "10.1007/s00216-020-03010-y"
+    },
+    {
+      "study": "Neuwald 2024",
+      "matrix": "Complex water",
+      "ratio": "EOF/TOF",
+      "lo": 0.1,
+      "hi": 2.0,
+      "doi": "10.1016/j.scitotenv.2024.172589"
+    },
+    {
+      "study": "AOAC 2025",
+      "matrix": "Food-contact",
+      "ratio": "EOF/TOF",
+      "lo": 0.5,
+      "hi": 15.0,
+      "doi": "10.1093/jaoacint/qsaf003"
+    },
+    {
+      "study": "Jovanovi\u0107 2024",
+      "matrix": "FCM raw",
+      "ratio": "\u03a3PFAS/TF",
+      "lo": 0.00027,
+      "hi": 0.00027,
+      "doi": "10.1080/19440049.2024.2332334"
+    }
+  ],
+  "gapA_targeted_pct_of_EOF": [
+    {
+      "study": "M\u00fcller 2026",
+      "matrix": "Sediment",
+      "val": "\u22641.3% of EOF",
+      "doi": "10.1016/j.envint.2026.110104"
+    },
+    {
+      "study": "Cioni 2024",
+      "matrix": "Serum (suspect)",
+      "val": "2\u20134% of EOF",
+      "doi": "10.1021/acs.est.4c03758"
+    },
+    {
+      "study": "Neuwald 2024(ACA)",
+      "matrix": "Water",
+      "val": "0.01\u20131% of EOF",
+      "doi": "10.1016/j.aca.2024.342754"
+    },
+    {
+      "study": "Bj\u00f6rnsdotter 2023",
+      "matrix": "SPM",
+      "val": "uEOF 82\u219299% of EOF",
+      "doi": "10.1016/j.scitotenv.2023.163753"
+    },
+    {
+      "study": "Cioni 2023",
+      "matrix": "Serum",
+      "val": "uEOF 10\u201346% of EOF",
+      "doi": "10.1021/acs.est.3c03655"
+    }
+  ],
+  "headline": "EOF\ub294 \ucd1d(\uc720\uae30)\ubd88\uc18c\uc758 0.04\u201315%\ub9cc \ud3ec\uc9d1(4\uac1c \uc2e4\ubcf4\uace0 \uc5f0\uad6c) \u2192 \ube44\ucd94\ucd9c\uc131 \uc720\uae30\ubd88\uc18c(TOF\u2212EOF)=85\u201399.9%. \ubd88\uc6a9\uc131 MFP\ub294 \uc774 \ube44\ucd94\ucd9c\uc131 pool \uc18c\uc7ac\uc774\ub098 \uac70\uc758 \ubbf8\uadc0\uc18d. Neuwald(ACA) pyrolysis-GC-MS\ub85c \ube44\ucd94\ucd9c\uc131 \ubd88\uc18c \uc9c1\uc811 \ud655\uc778.",
+  "reframe": "Gap A(EOF \ub0b4 \ubbf8\uc9c0PFAS, \ud1b5\uc0c1\ub17c\uc758) \u226a Gap B(EOF \ubc16 \ube44\ucd94\ucd9c\uc131, MFP \uc18c\uc7ac)",
+  "note": "Cioni serum EOF/TF\ub294 \ucd08\ub85d \ubbf8\ubcf4\uace0\u2192Gap B \uc815\ub7c9\uc5d0\uc11c \uc81c\uc678(\ubb34\uacb0\uc131). serum\uc740 Gap A(uEOF)\ub85c\ub9cc \uc778\uc6a9."
+}
