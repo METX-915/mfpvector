@@ -1,0 +1,42 @@
+; Umbrella-sampling production, one window.
+; 19 windows, force constant 2000 kJ mol^-1 nm^-2.
+; 5 ns per window; extend_pmf.sh appends more time to specific windows
+; without discarding what has already been sampled.
+integrator               = md
+dt                       = 0.002
+nsteps                   = 2500000         ; 5 ns per window
+nstlist                  = 40
+nstenergy                = 5000
+nstxout-compressed       = 25000
+cutoff-scheme            = Verlet
+coulombtype              = PME
+rcoulomb                 = 1.0
+rvdw                     = 1.0
+pbc                      = xyz
+constraints              = h-bonds
+constraint-algorithm     = lincs
+tcoupl                   = V-rescale
+tc-grps                  = System
+tau-t                    = 0.1
+ref-t                    = 300
+pcoupl                   = C-rescale
+pcoupltype               = semiisotropic
+tau-p                    = 2.0
+ref-p                    = 1.0 1.0
+compressibility          = 4.5e-5 4.5e-5
+gen-vel                  = no
+pull                     = yes
+pull-ngroups             = 2
+pull-ncoords             = 1
+pull-group1-name         = POL
+pull-group2-name         = PFA
+pull-coord1-type         = umbrella
+pull-coord1-geometry     = distance
+pull-coord1-dim          = N N Y
+pull-coord1-groups       = 1 2
+pull-coord1-start        = yes
+pull-coord1-rate         = 0.0
+pull-coord1-k            = 2000            ; kJ mol^-1 nm^-2
+pull-nstxout             = 1000
+pull-nstfout             = 1000
+pull-pbc-ref-prev-step-com = yes

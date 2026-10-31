@@ -1,160 +1,105 @@
 # mfpvector
 
-Data and analysis code for the manuscript:
+Data and analysis code for the manuscript
 
-> **Microfluoroplastics as a Non-Extractable Organofluorine Pool: A Measurement Framework for Environmental Fluorine Mass Balance**
-> HanYeol Nam, Yoon Jeong Jang, Ku Kang
-> CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
-> Submitted to *Environmental Science: Processes & Impacts* (RSC)
+> **Fluorine content does not set PFAS sorption to fluoropolymer microplastics: free-energy anchors and a bound on an unquantified organofluorine pool**
+> HanYeol Nam, Yoon Jeong Jang, Ku Kang — CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
+> Submitted to *Journal of Hazardous Materials* (2026-10)
 
-Canonical URL: <https://github.com/METX-915/mfpvector>
+Canonical URL: <https://github.com/METX-915/mfpvector>. Release `v1.0.0` is the version cited in the manuscript's
+Data availability statement (Zenodo DOI in the manuscript).
 
-This repository archives the analysis scripts, per-replicate outputs, and figure
-data needed to reproduce the numbers in the manuscript and its Electronic
-Supplementary Information (ESI). Scope and known gaps are stated explicitly below.
+## What the repository supports
 
----
+1. **Adsorption interaction-energy screen** — GROMACS MD (GAFF2/AM1-BCC, TIP3P, 300 K) of PFOA, PFBS, HFPO-DA and
+   6:2 FTOH on amorphous PTFE, PVDF, ECTFE and polyethylene slabs: 4 × 4 × 5 = 80 trajectories, with Coulomb /
+   Lennard-Jones decomposition (`data/raw_results.csv`).
+2. **Umbrella-sampling free-energy anchors** — PMFs of PFOA on all four polymers with one protocol (`data/pmf/`):
+   PTFE −30.7 ± 3.5, PVDF −26.6 ± 3.2, ECTFE −32.2 ± 2.3, PE −31.4 ± 3.9 kJ mol⁻¹.
+3. **Fluorine mass-balance bound** — Monte Carlo scenario (2 × 10⁵ draws, seed 20260710) placing MFP-derived sediment
+   fluorine against a measured EOF reference, with Spearman sensitivity (`code/rq1_massbalance.py`).
+4. **Evidence-tier prioritization** — normalized adsorption × ordinal PPARα docking tier (`data/tier.json`,
+   `data/rq3_docking.json`).
 
-## What this study does
-
-Aggregate fluorine metrics (TF, TOF, EOF, AOF) miss insoluble fluoropolymer
-particles, so microfluoroplastic (MFP) fluorine belongs to the *non-extractable*
-organofluorine pool rather than to the unexplained extractable gap. The repository
-supports three quantitative components:
-
-1. **Mass-balance bounding** — a Monte Carlo scenario (2×10⁵ draws, fixed seed) placing
-   MFP-derived sediment fluorine relative to a measured EOF reference, with global
-   sensitivity analysis.
-2. **Adsorption interaction-energy screen** — GROMACS MD of four PFAS-related
-   compounds on PTFE / PVDF / ECTFE and a PE baseline (79 trajectories), plus two
-   umbrella-sampling PMF free-energy anchors for PFOA.
-3. **Evidence-tier prioritization** — an ordinal PPARα receptor tier × normalized
-   adsorption, reported as a decision matrix (not a calibrated risk index).
-
----
-
-## Repository layout
+## Layout
 
 ```
-mfpvector/
-├── code/
-│   ├── rq1_massbalance.py      # Monte Carlo mass-balance bound (seed 20260710) + Spearman sensitivity
-│   ├── analyze_rq2.py          # adsorption interaction-energy analysis (means, CI, effect sizes)
-│   ├── make_figures.py         # regenerates the adsorption 4-panel figure (manuscript Fig 3) from data/
-│   ├── make_fig4.py            # regenerates the evidence-tier figure (manuscript Fig 4) from data/
-│   ├── batch_run.py            # MD driver that produced data/raw_results.csv
-│   └── emit_md_inputs.py       # re-emits every .mdp / packmol input from batch_run.py
-├── data/
-│   ├── raw_results.csv         # per-replicate short-range interaction energies (79 trajectories)
-│   ├── results_table.csv       # per-cell mean IE with bootstrap 95% CI
-│   ├── experiment_summary.json # per-cell means/CI/SD + effect sizes vs PE
-│   ├── mfp_vi.json             # normalized adsorption (Â) and receptor evidence tier (Ĥ) → tier matrix
-│   ├── rq1_summary.json        # mass-balance percentiles + sensitivity (Spearman ρ)
-│   ├── rq3_docking.json        # PPARα (PDB 1K7L) smina docking scores (consistency check only)
-│   ├── pmf_result.json         # PVDF+PFOA umbrella-sampling PMF anchor (ΔG = −13.8 kJ/mol)
-│   └── tfeof_meta.json         # DOI-verified TF/TOF–EOF/AOF literature set
-├── figures/                    # created by make_figures.py (not tracked)
-├── md_inputs/                  # created by emit_md_inputs.py (not tracked)
-└── out/                        # created by analyze_rq2.py (not tracked)
+code/
+  batch_run.py            slab construction (two-stage packmol -> compress/anneal) + screen production driver
+  build/                  original builder pieces: patch_build.py, compact_conf.py (ETKDG, seed 20260710),
+                          make_structures.py, build_one.py, polymers/*.pdb, pfas/*.pdb
+  emit_md_inputs.py       re-emits every .mdp / packmol input from batch_run.py
+  analyze_screen.py       screen statistics -> experiment_summary.json, results_table.csv
+  make_fig2.py, make_fig3.py, make_ga.py, make_figS1.py, make_numbers_tex.py, make_si_tables.py
+  pmf_from_report.py      parses report_pmf.py output -> pmf summary json
+  rq1_massbalance.py      Monte Carlo mass-balance bound
+  pmf/                    umbrella-sampling protocol: rerun_pmf.sh, finish_pmf.sh, equil_cell.sh, shift_pfa.py,
+                          pull_smd.mdp, pull_umbrella.mdp, rebuild_windows.sh, extend_pmf.sh, infill.py,
+                          report_pmf.py, surf_z.py, com_dist.py, central_atom.py
+  README_analysis.md      command sequence that regenerates every number in the manuscript and SI
+topologies/               GAFF2/AM1-BCC topologies of the rebuilt PTFE, PVDF and PFOA (acpype: *_GMX.itp/.gro/.top, input pdb, mol2, frcmod)
+slabs/                    PTFE and PVDF dry slabs: packmol input, EM and four compression-stage .mdp, dry.gro/slab.gro, density, check
+md_inputs/                PTFE_PFOA and PVDF_PFOA screen cells: system.top, index.ndx, npt.gro, em/ions/npt .mdp, clean itp files
+archive/                  complete settings archive of the October 2026 PTFE/PVDF PMF recomputation (recompute PC, RTX 3090,
+                          GROMACS 2026.3): three zips (build+logs, PTFE windows, PVDF windows) holding every .mdp/.gro/.top/.ndx,
+                          cell equilibration, SMD, all umbrella windows (umb.mdp, umb.gro), WHAM in/out, pullx/pullf series,
+                          plus ENVIRONMENT (GPU/GROMACS/conda) and the full-archive MANIFEST
+data/
+  raw_results.csv         80 replicates: polymer, compound, seed, Coulomb, LJ, total short-range IE (kJ/mol)
+  results_table.csv, experiment_summary.json, tier.json
+  pmf/                    WHAM profiles, bootstrap profiles, window histograms, reports, slab checks (see data/pmf/README.md)
+  pmf_result.json         four-system PMF summary (supersedes the 2026-08 single-system entry)
+  rq1_summary.json, rq3_docking.json, tfeof_meta.json, mfp_vi.json
 ```
 
-Figure ↔ file mapping (as compiled in the manuscript): **Fig 1** framework schematic ·
-**Fig 2** mass-balance bounding · **Fig 3** adsorption screen (produced by
-`make_figures.py`) · **Fig 4** evidence-tier prioritization.
-
----
-
-## Reproducing the results
+## Reproducing
 
 ```bash
 pip install -r requirements.txt
-
-# Mass-balance bound + sensitivity (prints percentiles; matches data/rq1_summary.json)
-python code/rq1_massbalance.py
-
-# Adsorption means, bootstrap 95% CI, effect sizes
-# writes out/results_table.csv, byte-identical to data/results_table.csv
-python code/analyze_rq2.py
-
-# Regenerate the adsorption figure -> figures/Fig2.pdf (vector) and figures/Fig2.png
-python code/make_figures.py
-python code/make_fig4.py
-
-# Re-emit the GROMACS .mdp and packmol inputs used for the production runs.
-# Parameters are read out of code/batch_run.py with `ast`, not retyped, so the
-# emitted files are the ones the runs actually used.
-python code/emit_md_inputs.py
+python code/rq1_massbalance.py                                   # mass-balance bound
+python code/analyze_screen.py data/raw_results.csv out           # screen statistics
+python code/make_fig3.py out out/fig                             # evidence tier (tier.json) + Fig 3
+python code/make_fig2.py out data/raw_results.csv out/fig data/pmf/pmf_summary.json   # Fig 2
+python code/make_figS1.py out/fig PTFE=data/pmf/PTFE_prof.xvg:data/pmf/PTFE_bs.xvg:1.147:3.674 \
+    PVDF=data/pmf/PVDF_prof.xvg:data/pmf/PVDF_bs.xvg:1.512:3.642 ECTFE=data/pmf/ECTFE_prof.xvg:data/pmf/ECTFE_bs.xvg:1.653:3.966 \
+    PE=data/pmf/PE_prof.xvg:data/pmf/PE_bs.xvg:1.408:3.677                                   # Fig S1
+python code/make_numbers_tex.py out data/pmf/pmf_summary.json    # numbers.tex macros
+python code/make_si_tables.py out data/raw_results.csv data/pmf/pmf_summary.json
+python code/emit_md_inputs.py                                     # .mdp / packmol inputs of the production runs
 ```
 
-All scripts resolve their paths relative to the repository root and run from a fresh
-clone with no configuration. Random draws use fixed seeds (`20260710` for the Monte
-Carlo, `7` for the bootstrap), so the numeric outputs are bit-reproducible.
+Fixed seeds (`20260710` Monte Carlo and conformer search, `7` bootstrap) make the numeric outputs reproducible.
 
----
+## Provenance and integrity notes
 
-## Data provenance and integrity notes
+- All 80 screen trajectories and the ECTFE and PE PMFs were computed in September 2026 on the authors' GPU
+  workstation; the PTFE and PVDF PMF systems were rebuilt and recomputed in October 2026 on a second machine with
+  the identical two-stage slab protocol after a hardware failure destroyed the first workstation. Rebuilt dry-slab
+  interior densities agree with SI Table S1 to −1.0 % (PTFE) and +1.3 % (PVDF) (`data/pmf/*_dryslab.txt`).
+- Interaction energies are ordinal proxies, not free energies; the absolute scale comes from the PMFs. The PMF
+  protocol, valid ranges and block analysis are in `data/pmf/report_*.txt` and SI section S4.
+- The 2026-08 `pmf_result.json` (PVDF −13.8 kJ/mol, k = 2000, 19 windows) used a different protocol and is
+  superseded; it is not comparable to the four values above.
 
-- Interaction energies are used only as **ordinal ranking proxies**; they are not free
-  energies. Absolute PFOA adsorption free energies come from umbrella-sampling PMFs.
-- **Every panel of the adsorption figure is generated from the files in `data/`**, with one
-  stated exception: the ECTFE+PFOA PMF free energy (ΔG = −28.5 kJ/mol) plotted in panel (d)
-  is an author-reported result (ESI Table S6) whose window-level output is not yet archived
-  (see Known gaps). The PVDF+PFOA anchor is in `pmf_result.json`.
-- **Zero-interaction replicates.** Short-range Coulomb and Lennard-Jones terms are
-  truncated at a 1.0 nm cutoff, so a replicate in which the compound leaves the surface
-  and stays beyond that cutoff for the whole averaging window returns exactly
-  `0.000`. Four of the 79 replicates in `raw_results.csv` are of this type
-  (`ECTFE/PFBS/4`, `PE/PFOA/4`, `PE/GenX/1`, `PE/GenX/5`) and are **retained** in the
-  cell means, so those means are ensemble averages over bound and spontaneously
-  desorbed states. ESI Table S5 reports the full analysis with these four replicates
-  removed; no conclusion in the manuscript depends on which treatment is used.
-- **PE–6:2 FTOH has four replicates, not five**; the seed-5 trajectory is absent from
-  the archived output, which is why the screen contains 79 rather than 80 trajectories.
-- `analyze_rq2.py` lists **PP** among the polymers because it was in the original run
-  plan, but PP produced no completed trajectories and appears nowhere in the data or
-  the manuscript.
-- The only statistically significant polymer-level contrast in the analysis as reported
-  is **PVDF > PE** (p = 0.004); all other polymer contrasts are descriptive.
-- The MFP-fraction prior (2–8 % of microplastic count, `rng.uniform(0.02, 0.08)` in
-  `rq1_massbalance.py`) derives from a single LDIR reanalysis and is treated
-  as a **bounding prior**, not a universal abundance.
+### Not archived
 
-### Not archived (available from the corresponding author on request)
-
-
-- **ECTFE+PFOA PMF window data (ΔG = −28.5 kJ/mol) is missing**; `pmf_result.json`
-  holds the PVDF+PFOA anchor only.
-- The acpype/GAFF2 topologies (`*_GMX.itp`), the polymer and PFAS `.pdb` structures, and
-  `index.ndx` are **not archived**. They cannot be regenerated here: AM1-BCC charges depend
-  on the exact input geometry, so re-deriving them would not give the files the runs used.
-- The umbrella-sampling window definitions and the `gmx wham` outputs (`profile.xvg`,
-  `bsResult.xvg`) for both PMF anchors are **not archived**.
-- The short-timescale isotonic-saline stability check reported in ESI Section S5 / Table S7
-  has no archived inputs or output.
-
-The manuscript's Data Availability statement lists these items as available from the
-corresponding author on request, not as archived here.
-
----
-
-## Release status
-
-Public release of this repository has been cleared; no institutional security review is
-outstanding. This repository is the archive referenced by the manuscript's Data
-Availability statement. A DOI can additionally be minted by enabling the Zenodo–GitHub
-integration and publishing a tagged release.
+- **Raw trajectories** (all systems) — size; those of the first workstation were lost with it.
+- **Force-field topologies and slab/cell files of the September 2026 screen** (ECTFE, PE, PFBS, HFPO-DA, 6:2 FTOH systems
+  and the September PTFE/PVDF cells) were lost with the first workstation. `code/build/` archives the deterministic
+  structure generation and the acpype protocol that produced them; because AM1-BCC charges depend on the input
+  geometry, a re-derivation is equivalent in protocol, not byte-identical. The ECTFE and PE PMF outputs
+  (`data/pmf/`) are complete; their window inputs are not archived.
+- The October 2026 PTFE, PVDF and PFOA topologies, slabs, cells and all PMF window inputs **are** archived
+  (`topologies/`, `slabs/`, `md_inputs/`, `archive/`).
 
 ## License
 
-Code: MIT (see `LICENSE`). Data and figures: CC-BY-4.0.
+Code: MIT (`LICENSE`). Data and figures: CC BY 4.0.
 
-## Citing this repository
+## Citation
 
-If you use these data or scripts, please cite the manuscript above. A versioned
-snapshot with a DOI can be created by enabling the Zenodo–GitHub integration and
-publishing a release.
+Cite the manuscript above and the archived release (`CITATION.cff`; Zenodo DOI once minted).
 
 ## Contact
 
-Corresponding author: Ku Kang — bisu9082@gmail.com
-Repository maintained by: HanYeol Nam (@METX-915) — namhy915@gmail.com
+Corresponding author: Ku Kang — bisu9082@gmail.com · Repository: HanYeol Nam (@METX-915)

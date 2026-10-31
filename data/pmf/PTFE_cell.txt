@@ -1,0 +1,3 @@
+PTFE z_surf(equil)=1.699
+last window box:    4.08593   4.08593   8.12507
+n17        z_surface = 1.718 nm   내부밀도 1878.9 kg/m^3   계면폭(10-90%) 0.57 nm

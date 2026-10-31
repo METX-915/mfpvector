@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "mfpvector: analysis code and molecular-dynamics run parameters for PFAS sorption to fluoropolymer microplastics"
+abstract: >-
+  Analysis scripts, molecular-dynamics driver and run parameters, docking
+  configuration, Monte Carlo fluorine mass-balance script and per-replicate
+  interaction-energy outputs and umbrella-sampling PMF data supporting the microfluoroplastics manuscript.
+authors:
+  - family-names: Nam
+    given-names: HanYeol
+    orcid: "https://orcid.org/0000-0001-7832-4687"
+    affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"
+  - family-names: Jang
+    given-names: Yoon Jeong
+    orcid: "https://orcid.org/0000-0002-5625-2528"
+    affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"  - family-names: Kang
+    given-names: Ku
+    orcid: "https://orcid.org/0000-0001-8739-218X"
+    affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"
+repository-code: "https://github.com/METX-915/mfpvector"
+license: MIT
+version: v1.0.0
+date-released: "2026-10-21"
+keywords:
+  - PFAS
+  - fluoropolymer
+  - microplastics
+  - organofluorine mass balance
+  - molecular dynamics
+  - umbrella sampling
