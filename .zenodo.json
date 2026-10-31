@@ -1,0 +1,36 @@
+{
+  "upload_type": "software",
+  "title": "mfpvector: analysis code and molecular-dynamics run parameters for PFAS sorption to fluoropolymer microplastics",
+  "description": "<p>Analysis scripts, molecular-dynamics driver and run parameters (packmol inputs and .mdp files), the umbrella-sampling protocol scripts with their WHAM profiles, bootstrap profiles and window histograms for PFOA on PTFE, PVDF, ECTFE and PE, the docking configuration, the Monte Carlo fluorine mass-balance script (fixed seed 20260710) and the per-replicate interaction-energy outputs supporting the manuscript &ldquo;Fluorine content does not set PFAS sorption to fluoropolymer microplastics: free-energy anchors and a bound on an unquantified organofluorine pool&rdquo;.</p><p>Raw trajectories are not included. The GAFF2/AM1-BCC topologies, dry slabs, screen cells and all umbrella-window inputs of the PTFE, PVDF and PFOA systems rebuilt in October 2026 are archived (topologies/, slabs/, md_inputs/, archive/); those of the September 2026 screen were lost in a hardware failure, and the deterministic structure-generation and acpype protocol that produced them is archived under code/build/.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Nam, HanYeol",
+      "affiliation": "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense",
+      "orcid": "0000-0001-7832-4687"
+    },
+    {
+      "name": "Jang, Yoon Jeong",
+      "affiliation": "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense",
+      "orcid": "0000-0002-5625-2528"
+    },
+    {
+      "name": "Kang, Ku",
+      "affiliation": "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense",
+      "orcid": "0000-0001-8739-218X"
+    }
+  ],
+  "keywords": [
+    "PFAS",
+    "fluoropolymer",
+    "microplastics",
+    "organofluorine mass balance",
+    "molecular dynamics",
+    "umbrella sampling",
+    "GROMACS",
+    "extractable organic fluorine"
+  ],
+  "version": "v1.0.0"
+}
