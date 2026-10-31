@@ -1,0 +1,17 @@
+; Joung-Cheatham (2008) monovalent ions for TIP3P — matches the Na/Cl
+; atomtypes that batch_run.py injects via EXTRA
+[ moleculetype ]
+; name  nrexcl
+NA      1
+
+[ atoms ]
+;  nr type resnr residue atom cgnr charge     mass
+    1   Na     1      NA   NA    1    1.0  22.98977
+
+[ moleculetype ]
+; name  nrexcl
+CL      1
+
+[ atoms ]
+;  nr type resnr residue atom cgnr charge     mass
+    1   Cl     1      CL   CL    1   -1.0  35.45300

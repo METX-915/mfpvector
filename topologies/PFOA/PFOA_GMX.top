@@ -1,0 +1,20 @@
+; PFOA_GMX.top created by acpype (v: 2026.9.4) on Sat Oct  3 07:34:43 2026
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include PFOA_GMX.itp topology
+#include "PFOA_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_PFOA.itp"
+#endif
+
+[ system ]
+ PFOA
+
+[ molecules ]
+; Compound        nmols
+ PFOA             1     

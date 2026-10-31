@@ -1,0 +1,7 @@
+tolerance 1.5
+filetype pdb
+output slabs/PTFE/dry.pdb
+structure polymers/PTFE.pdb
+  number 42
+  inside box 2. 2. 2. 38.0 38.0 150.0
+end structure
