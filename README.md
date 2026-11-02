@@ -6,8 +6,8 @@ Data and analysis code for the manuscript
 > HanYeol Nam, Yoon Jeong Jang, Ku Kang — CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
 > Submitted to *Journal of Hazardous Materials* (2026-10)
 
-Canonical URL: <https://github.com/METX-915/mfpvector>. Release `v1.0.0` is the version cited in the manuscript's
-Data availability statement (Zenodo DOI in the manuscript).
+Canonical URL: <https://github.com/METX-915/mfpvector>. Archived at Zenodo — concept DOI (all versions)
+[10.5281/zenodo.23838772](https://doi.org/10.5281/zenodo.23838772); v1.0.0 = 10.5281/zenodo.23838773 (2026-10-31), v1.0.1 = see Zenodo.
 
 ## What the repository supports
 
@@ -43,7 +43,8 @@ md_inputs/                PTFE_PFOA and PVDF_PFOA screen cells: system.top, inde
 archive/                  complete settings archive of the October 2026 PTFE/PVDF PMF recomputation (recompute PC, RTX 3090,
                           GROMACS 2026.3): three zips (build+logs, PTFE windows, PVDF windows) holding every .mdp/.gro/.top/.ndx,
                           cell equilibration, SMD, all umbrella windows (umb.mdp, umb.gro), WHAM in/out, pullx/pullf series,
-                          plus ENVIRONMENT (GPU/GROMACS/conda) and the full-archive MANIFEST
+                          plus ENVIRONMENT (GPU/GROMACS/conda) and the MANIFEST of the authors' full archive (687 files;
+                          the published zips omit mdrun logs and .tpr files, see README_curation.md inside)
 data/
   raw_results.csv         80 replicates: polymer, compound, seed, Coulomb, LJ, total short-range IE (kJ/mol)
   results_table.csv, experiment_summary.json, tier.json
@@ -78,8 +79,10 @@ Fixed seeds (`20260710` Monte Carlo and conformer search, `7` bootstrap) make th
   interior densities agree with SI Table S1 to −1.0 % (PTFE) and +1.3 % (PVDF) (`data/pmf/*_dryslab.txt`).
 - Interaction energies are ordinal proxies, not free energies; the absolute scale comes from the PMFs. The PMF
   protocol, valid ranges and block analysis are in `data/pmf/report_*.txt` and SI section S4.
-- The 2026-08 `pmf_result.json` (PVDF −13.8 kJ/mol, k = 2000, 19 windows) used a different protocol and is
-  superseded; it is not comparable to the four values above.
+- PMF provenance (all runs ever made, see SI): 2026-08 PVDF −13.8 kJ/mol (k = 2000, 19 windows, 5 ns, different
+  protocol, superseded); 2026-09 first-workstation PTFE/PVDF runs (lost before completion; overlap criterion not met,
+  not reported); 2026-10 rebuilt PTFE/PVDF runs = the reported values. `batch_run.py` also carries a PP arm that
+  produced no completed trajectories and is not part of the study.
 
 ### Not archived
 
@@ -98,7 +101,7 @@ Code: MIT (`LICENSE`). Data and figures: CC BY 4.0.
 
 ## Citation
 
-Cite the manuscript above and the archived release (`CITATION.cff`; Zenodo DOI once minted).
+Cite the manuscript above and the archived release (`CITATION.cff`; Zenodo concept DOI 10.5281/zenodo.23838772).
 
 ## Contact
 

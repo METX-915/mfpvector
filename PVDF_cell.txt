@@ -1,0 +1,3 @@
+PVDF z_surf(equil)=1.801
+last window box:    4.05307   4.05307   8.11240
+n16        z_surface = 1.803 nm   내부밀도 1468.2 kg/m^3   계면폭(10-90%) 0.33 nm

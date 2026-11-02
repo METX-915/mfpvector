@@ -1,0 +1,35 @@
+{
+ "module": "PMF_anchor",
+ "systems": {
+  "PTFE_PFOA": {
+   "dG_ads_kJmol": -30.72,
+   "err_kJmol": 3.52,
+   "windows": 30,
+   "analysed_ns": "4-8",
+   "min_overlap_pct": 11
+  },
+  "PVDF_PFOA": {
+   "dG_ads_kJmol": -26.62,
+   "err_kJmol": 3.18,
+   "windows": 22,
+   "analysed_ns": "4-8",
+   "min_overlap_pct": 12
+  },
+  "ECTFE_PFOA": {
+   "dG_ads_kJmol": -32.17,
+   "err_kJmol": 2.32,
+   "windows": 21,
+   "analysed_ns": "4-13",
+   "min_overlap_pct": 11
+  },
+  "PE_PFOA": {
+   "dG_ads_kJmol": -31.35,
+   "err_kJmol": 3.92,
+   "windows": 24,
+   "analysed_ns": "4-8",
+   "min_overlap_pct": 11
+  }
+ },
+ "method": "umbrella sampling, k = 1000 kJ mol-1 nm-2, 0.13 nm windows, 8 ns per window (ECTFE 13 ns), first 4 ns discarded, gmx wham b-hist bootstrap 200; dG = minimum - mean of outer 25 % plateau; error = sqrt(sd_plateau^2 + sd_min^2)",
+ "note": "Supersedes the 2026-08 single-system entry (PVDF -13.8 kJ/mol, k = 2000, 19 windows), which used a different protocol and is not comparable. Full data in data/pmf/."
+}
