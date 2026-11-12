@@ -33,7 +33,7 @@
     "wide_CI": "expected (propagates the d^3 size uncertainty)"
   },
   "flags": [
-    "MFP fraction 2-8%: rounded from the 1.6-8.3% reported by Li et al. 2026 (DOI 10.1021/acs.est.6c04873); single-source prior, stress-tested in ESI Table S11",
+    "MFP fraction 2-8%: rounded from the 1.6-8.3% reported by Li et al. 2026 (DOI 10.1021/acs.est.6c04873); single-source prior, stress-tested in SI Table S12",
     "particle size and shape factor: priors, not measurements; size is the dominant sensitivity (Spearman rho 0.84)"
   ]
 }

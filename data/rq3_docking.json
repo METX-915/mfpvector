@@ -1,36 +1,36 @@
 {
-  "module": "RQ3_PPARalpha_docking",
-  "run_date": "2026-07-16",
-  "receptor": "PPARalpha ligand-binding domain, PDB 1K7L chain A (co-crystallised with the agonist GW409544)",
-  "engine": "smina (AutoDock Vina scoring)",
-  "box_center": [
-    -17.65,
-    -14.42,
-    -5.41
-  ],
-  "box_size": [
-    22,
-    22,
-    22
-  ],
-  "exhaustiveness": 16,
-  "seed": 42,
-  "best_affinity_kcal_per_mol": {
-    "FTOH62": -7.8,
-    "PFOA": -7.7,
-    "GenX": -7.1,
-    "PFBS": -6.5
-  },
-  "H_receptor_norm": {
-    "FTOH62": 1.0,
-    "PFOA": 0.92,
-    "GenX": 0.46,
-    "PFBS": 0.0
-  },
-  "sanity": "PFOA (C8, known agonist) -7.7 kcal/mol ranks above PFBS (C4) -6.5, i.e. long chain > short chain, consistent with the trend reported by Evans et al. 2022",
-  "limitations": [
-    "smina with Vina scoring; GNINA CNN rescoring or MM-GBSA would be a refinement",
-    "6:2 FTOH is a precursor, so its PPARalpha activity appears only after metabolism",
-    "the docking spread is narrow (-6.5 to -7.8 kcal/mol); placing small anions in a large lipophilic pocket limits discriminating power"
-  ]
+ "module": "RQ3_PPARalpha_docking",
+ "run_date": "2026-07-16",
+ "receptor": "PPARalpha ligand-binding domain, PDB 1K7L chain A (co-crystallised with the agonist GW409544)",
+ "engine": "smina (AutoDock Vina scoring)",
+ "box_center": [
+  -17.65,
+  -14.42,
+  -5.41
+ ],
+ "box_size": [
+  22,
+  22,
+  22
+ ],
+ "exhaustiveness": 16,
+ "seed": 42,
+ "best_affinity_kcal_per_mol": {
+  "FTOH62": -7.8,
+  "PFOA": -7.7,
+  "GenX": -7.1,
+  "PFBS": -6.5
+ },
+ "H_receptor_norm": {
+  "FTOH62": 1.0,
+  "PFOA": 0.92,
+  "GenX": 0.46,
+  "PFBS": 0.2
+ },
+ "sanity": "PFOA (C8, known agonist) -7.7 kcal/mol ranks above PFBS (C4) -6.5, i.e. long chain > short chain, consistent with the trend reported by Evans et al. 2022",
+ "limitations": [
+  "smina with Vina scoring; GNINA CNN rescoring or MM-GBSA would be a refinement",
+  "6:2 FTOH is a precursor, so its PPARalpha activity appears only after metabolism",
+  "the docking spread is narrow (-6.5 to -7.8 kcal/mol); placing small anions in a large lipophilic pocket limits discriminating power"
+ ]
 }

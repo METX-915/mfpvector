@@ -1,0 +1,79 @@
+[11-12 15:48:32] ECTFE_FTOH62 s1 gasteiger: Coul 5.50 LJ -63.35 (6s)
+[11-12 15:48:38] ECTFE_FTOH62 s2 gasteiger: Coul 0.16 LJ -4.36 (6s)
+[11-12 15:48:45] ECTFE_FTOH62 s3 gasteiger: Coul 5.54 LJ -59.99 (7s)
+[11-12 15:48:52] ECTFE_FTOH62 s4 gasteiger: Coul 4.93 LJ -71.80 (7s)
+[11-12 15:48:59] ECTFE_FTOH62 s5 gasteiger: Coul 5.85 LJ -65.15 (7s)
+[11-12 15:49:06] ECTFE_FTOH62 s1 mmff94: Coul 21.21 LJ -63.35 (7s)
+[11-12 15:49:12] ECTFE_FTOH62 s2 mmff94: Coul 1.20 LJ -4.36 (6s)
+[11-12 15:49:19] ECTFE_FTOH62 s3 mmff94: Coul 21.57 LJ -59.99 (7s)
+[11-12 15:49:26] ECTFE_FTOH62 s4 mmff94: Coul 22.52 LJ -71.80 (7s)
+[11-12 15:49:33] ECTFE_FTOH62 s5 mmff94: Coul 23.11 LJ -65.15 (7s)
+[11-12 15:49:39] ECTFE_GenX s1 gasteiger: Coul 4.59 LJ -50.50 (7s)
+[11-12 15:49:46] ECTFE_GenX s2 gasteiger: Coul 2.97 LJ -53.80 (7s)
+[11-12 15:49:53] ECTFE_GenX s3 gasteiger: Coul 2.92 LJ -68.85 (7s)
+[11-12 15:50:00] ECTFE_GenX s4 gasteiger: Coul 0.92 LJ -46.46 (7s)
+[11-12 15:50:07] ECTFE_GenX s5 gasteiger: Coul 3.47 LJ -44.12 (7s)
+[11-12 15:50:13] ECTFE_GenX s1 mmff94: Coul 20.99 LJ -50.50 (7s)
+[11-12 15:50:21] ECTFE_GenX s2 mmff94: Coul 19.73 LJ -53.80 (7s)
+[11-12 15:50:28] ECTFE_GenX s3 mmff94: Coul 25.75 LJ -68.85 (7s)
+[11-12 15:50:35] ECTFE_GenX s4 mmff94: Coul 13.79 LJ -46.46 (7s)
+[11-12 15:50:42] ECTFE_GenX s5 mmff94: Coul 15.81 LJ -44.12 (7s)
+[11-12 15:50:49] ECTFE_PFBS s1 gasteiger: Coul 1.59 LJ -68.01 (7s)
+[11-12 15:50:56] ECTFE_PFBS s2 gasteiger: Coul 8.61 LJ -55.38 (7s)
+[11-12 15:51:03] ECTFE_PFBS s3 gasteiger: Coul 6.02 LJ -47.92 (7s)
+[11-12 15:51:10] ECTFE_PFBS s4 gasteiger: Coul 6.53 LJ -46.00 (7s)
+[11-12 15:51:16] ECTFE_PFBS s5 gasteiger: Coul 4.83 LJ -42.69 (7s)
+[11-12 15:51:23] ECTFE_PFBS s1 mmff94: Coul 23.50 LJ -68.01 (7s)
+[11-12 15:51:30] ECTFE_PFBS s2 mmff94: Coul 28.10 LJ -55.38 (7s)
+[11-12 15:51:37] ECTFE_PFBS s3 mmff94: Coul 22.16 LJ -47.92 (7s)
+[11-12 15:51:44] ECTFE_PFBS s4 mmff94: Coul 22.87 LJ -46.00 (7s)
+[11-12 15:51:51] ECTFE_PFBS s5 mmff94: Coul 18.84 LJ -42.69 (7s)
+[11-12 15:51:59] PE_FTOH62 s1 gasteiger: Coul -2.01 LJ -62.65 (8s)
+[11-12 15:52:07] PE_FTOH62 s2 gasteiger: Coul -2.29 LJ -70.36 (8s)
+[11-12 15:52:16] PE_FTOH62 s3 gasteiger: Coul -2.19 LJ -67.77 (9s)
+[11-12 15:52:24] PE_FTOH62 s4 gasteiger: Coul -2.33 LJ -72.02 (8s)
+[11-12 15:52:32] PE_FTOH62 s5 gasteiger: Coul -2.69 LJ -86.09 (8s)
+[11-12 15:52:40] PE_FTOH62 s1 mmff94: Coul 0.00 LJ -62.65 (8s)
+[11-12 15:52:48] PE_FTOH62 s2 mmff94: Coul 0.00 LJ -70.36 (8s)
+[11-12 15:52:56] PE_FTOH62 s3 mmff94: Coul 0.00 LJ -67.77 (8s)
+[11-12 15:53:03] PE_FTOH62 s4 mmff94: Coul 0.00 LJ -72.02 (7s)
+[11-12 15:53:11] PE_FTOH62 s5 mmff94: Coul 0.00 LJ -86.09 (8s)
+[11-12 15:53:19] PE_GenX s1 gasteiger: Coul -2.27 LJ -49.60 (8s)
+Traceback (most recent call last):
+  File "/home/namhy915/real2AB/charge_sensitivity.py", line 93, in <module>
+    main()
+    ~~~~^^
+  File "/home/namhy915/real2AB/charge_sensitivity.py", line 74, in main
+    run(["gmx", "grompp", "-f", f"s{seed}_re.mdp", "-c", "npt.gro", "-p", f"system_{model}.top",
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         "-n", "index.ndx", "-o", f"{tag}.tpr", "-maxwarn", "5"], cwd=wd)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/namhy915/real2AB/charge_sensitivity.py", line 24, in run
+    raise RuntimeError(" ".join(cmd) + "\n" + r.stderr[-1500:])
+RuntimeError: gmx grompp -f s2_re.mdp -c npt.gro -p system_gasteiger.top -n index.ndx -o s2_re_gasteiger.tpr -maxwarn 5
+                :-) GROMACS - gmx grompp, 2026.3-conda_forge (-:
+
+Executable:   /home/namhy915/miniforge3/envs/md/bin.AVX2_256/gmx
+Data prefix:  /home/namhy915/miniforge3/envs/md
+Working dir:  /home/namhy915/real2AB/systems/PE_GenX
+Command line:
+  gmx grompp -f s2_re.mdp -c npt.gro -p system_gasteiger.top -n index.ndx -o s2_re_gasteiger.tpr -maxwarn 5
+
+
+-------------------------------------------------------
+Program:     gmx grompp, version 2026.3-conda_forge
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -f
+    File 's2_re.mdp' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+

@@ -11,7 +11,7 @@ DATA PROVENANCE (every input traced to a source; no invented values):
      (literature range: Saigon 140-1200; Rhine 228-3763; Olifants/Sabie 2022-27259 items/kg) — WebSearch 2026-07
 [R4] MFP = 2-8% of total microplastic COUNT in dust/sediment
      Li et al. 2026, Environ. Sci. Technol., DOI 10.1021/acs.est.6c04873 (LDIR spectral-library reanalysis;
-     reported 1.6-8.3%, implemented here as a rounded 2-8% prior and stress-tested in ESI Table S11)
+     reported 1.6-8.3%, implemented here as a rounded 2-8% prior and stress-tested in SI Table S12)
 [R5] fluorine wt%: PTFE 76.0%, PVDF 59.4%, ECTFE ~39%, FEP 76.0% (stoichiometric calculation)
 [R6] polymer density: PTFE 2.20, PVDF 1.78 g/cm3 (tabulated material property); MFP-weighted ~2.0
 [P1] effective particle size: log-uniform 20-300 um  [PRIOR: sediment microplastic size distribution; dominant uncertainty]

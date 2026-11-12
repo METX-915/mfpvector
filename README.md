@@ -2,7 +2,7 @@
 
 Data and analysis code for the manuscript
 
-> **Fluorine content does not set PFAS sorption to fluoropolymer microplastics: free-energy anchors and a bound on an unquantified organofluorine pool**
+> **Fluorine content does not set simulated PFAS sorption to fluoropolymer microplastics: free-energy anchors and a bound on an unquantified organofluorine pool**
 > HanYeol Nam, Yoon Jeong Jang, Ku Kang — CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
 > Submitted to *Journal of Hazardous Materials* (2026-10)
 
@@ -13,13 +13,15 @@ Canonical URL: <https://github.com/METX-915/mfpvector>. Archived at Zenodo — c
 
 1. **Adsorption interaction-energy screen** — GROMACS MD (GAFF2/AM1-BCC, TIP3P, 300 K) of PFOA, PFBS, HFPO-DA and
    6:2 FTOH on amorphous PTFE, PVDF, ECTFE and polyethylene slabs: 4 × 4 × 5 = 80 trajectories, with Coulomb /
-   Lennard-Jones decomposition (`data/raw_results.csv`).
+   Lennard-Jones decomposition (`data/raw_results.csv`). All 16 cells were repeated on a second, independently
+   built slab per polymer (`data/realization2/`), and the Coulomb term was re-evaluated with Gasteiger-Marsili and MMFF94
+   charges (`data/charge_model/`).
 2. **Umbrella-sampling free-energy anchors** — PMFs of PFOA on all four polymers with one protocol (`data/pmf/`):
    PTFE −30.7 ± 3.5, PVDF −26.6 ± 3.2, ECTFE −32.2 ± 2.3, PE −31.4 ± 3.9 kJ mol⁻¹.
 3. **Fluorine mass-balance bound** — Monte Carlo scenario (2 × 10⁵ draws, seed 20260710) placing MFP-derived sediment
    fluorine against a measured EOF reference, with Spearman sensitivity (`code/rq1_massbalance.py`).
 4. **Evidence-tier prioritization** — normalized adsorption × ordinal PPARα docking tier (`data/tier.json`,
-   `data/rq3_docking.json`).
+   `data/rq3_docking.json`); Supplementary Fig. S2.
 
 ## Layout
 
@@ -30,7 +32,11 @@ code/
                           make_structures.py, build_one.py, polymers/*.pdb, pfas/*.pdb
   emit_md_inputs.py       re-emits every .mdp / packmol input from batch_run.py
   analyze_screen.py       screen statistics -> experiment_summary.json, results_table.csv
-  make_fig2.py, make_fig3.py, make_ga.py, make_figS1.py, make_numbers_tex.py, make_si_tables.py
+  make_fig1.py, make_fig2.py, make_fig4.py (Fig 3, mass balance), make_fig3.py (SI Fig S2, tier), make_ga.py,
+                          make_figS1.py, make_numbers_tex.py, make_si_tables.py
+  sasa.py, ksurf.py       surface composition of the slabs (SI Table S16); surface partition coefficients from the PMFs
+  run_realization2.py, realization2_setAB/, realization2_setCD/   second slab realisation drivers (SI Section S11)
+  charge_model/           alternative charges (RDKit) and -rerun re-evaluation; SI Section S12 statistics and tables
   pmf_from_report.py      parses report_pmf.py output -> pmf summary json
   rq1_massbalance.py      Monte Carlo mass-balance bound
   pmf/                    umbrella-sampling protocol: rerun_pmf.sh, finish_pmf.sh, equil_cell.sh, shift_pfa.py,
@@ -50,7 +56,9 @@ data/
   results_table.csv, experiment_summary.json, tier.json
   pmf/                    WHAM profiles, bootstrap profiles, window histograms, reports, slab checks (see data/pmf/README.md)
   pmf_result.json         four-system PMF summary (supersedes the 2026-08 single-system entry)
-  rq1_summary.json, rq3_docking.json, tfeof_meta.json, mfp_vi.json
+  rq1_summary.json, rq3_docking.json, tfeof_meta.json, surface_summary.json
+  realization2/           second slab realisation: per-replicate outputs, IE time series, ECTFE/PE slabs, re-derived topologies
+  charge_model/           charges_alt.json, Coulomb/LJ under three charge models, rerun time series
 ```
 
 ## Reproducing
@@ -59,7 +67,8 @@ data/
 pip install -r requirements.txt
 python code/rq1_massbalance.py                                   # mass-balance bound
 python code/analyze_screen.py data/raw_results.csv out           # screen statistics
-python code/make_fig3.py out out/fig                             # evidence tier (tier.json) + Fig 3
+python code/make_fig3.py out out/fig                             # evidence tier (tier.json) + SI Fig S2
+python code/make_fig4.py                                         # Fig 3 (mass balance)
 python code/make_fig2.py out data/raw_results.csv out/fig data/pmf/pmf_summary.json   # Fig 2
 python code/make_figS1.py out/fig PTFE=data/pmf/PTFE_prof.xvg:data/pmf/PTFE_bs.xvg:1.147:3.674 \
     PVDF=data/pmf/PVDF_prof.xvg:data/pmf/PVDF_bs.xvg:1.512:3.642 ECTFE=data/pmf/ECTFE_prof.xvg:data/pmf/ECTFE_bs.xvg:1.653:3.966 \

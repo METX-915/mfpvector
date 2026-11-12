@@ -1,4 +1,4 @@
-"""Fig 3 (docking + evidence-tier matrix) from experiment_summary.json. Usage: make_fig3.py outdir figdir"""
+"""Supplementary Fig. S2 (docking + evidence-tier matrix; file name kept from earlier numbering) from experiment_summary.json. Usage: make_fig3.py outdir figdir"""
 import sys,json,os,numpy as np,matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 out,figdir=sys.argv[1],sys.argv[2]; os.makedirs(figdir,exist_ok=True)
 plt.rcParams.update({"font.size":12,"axes.spines.top":False,"axes.spines.right":False,"font.family":"DejaVu Sans","axes.titleweight":"bold","pdf.fonttype":42,"ps.fonttype":42})

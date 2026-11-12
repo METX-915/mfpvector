@@ -1,0 +1,22 @@
+nohup: ignoring input
+[2026-11-04 20:57:33] START realization-2 screen: ['PTFE_PFOA', 'PVDF_PFOA'] x seeds [1, 2, 3, 4, 5], PROD_NS=6, ntomp=8
+[2026-11-04 20:57:33] RUN PTFE_PFOA seed 1
+[2026-11-04 21:30:23] DONE PTFE_PFOA seed 1: Coul 23.69 LJ -71.72 total -48.03 kJ/mol (32.8 min)
+[2026-11-04 21:30:23] RUN PTFE_PFOA seed 2
+[2026-11-04 22:03:57] DONE PTFE_PFOA seed 2: Coul 20.95 LJ -73.53 total -52.58 kJ/mol (33.6 min)
+[2026-11-04 22:03:57] skip PTFE_PFOA seed 3 (done)
+[2026-11-04 22:03:57] RUN PTFE_PFOA seed 4
+[2026-11-04 22:38:36] DONE PTFE_PFOA seed 4: Coul 13.02 LJ -43.57 total -30.55 kJ/mol (34.7 min)
+[2026-11-04 22:38:36] RUN PTFE_PFOA seed 5
+[2026-11-04 23:07:16] DONE PTFE_PFOA seed 5: Coul 26.87 LJ -78.17 total -51.30 kJ/mol (28.7 min)
+[2026-11-04 23:07:16] RUN PVDF_PFOA seed 1
+[2026-11-04 23:29:22] DONE PVDF_PFOA seed 1: Coul -1.27 LJ -71.48 total -72.75 kJ/mol (22.1 min)
+[2026-11-04 23:29:22] RUN PVDF_PFOA seed 2
+[2026-11-04 23:51:59] DONE PVDF_PFOA seed 2: Coul 3.60 LJ -49.53 total -45.93 kJ/mol (22.6 min)
+[2026-11-04 23:51:59] RUN PVDF_PFOA seed 3
+[2026-11-05 00:14:36] DONE PVDF_PFOA seed 3: Coul 1.56 LJ -47.00 total -45.45 kJ/mol (22.6 min)
+[2026-11-05 00:14:36] RUN PVDF_PFOA seed 4
+[2026-11-05 01:12:50] DONE PVDF_PFOA seed 4: Coul 4.55 LJ -53.08 total -48.53 kJ/mol (58.2 min)
+[2026-11-05 01:12:50] RUN PVDF_PFOA seed 5
+[2026-11-05 02:36:29] DONE PVDF_PFOA seed 5: Coul 4.22 LJ -59.65 total -55.44 kJ/mol (83.7 min)
+[2026-11-05 02:36:29] ALL DONE

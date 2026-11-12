@@ -1,0 +1,119 @@
+[11-06 09:30:04] BATCH START: 20 runs (2x2x5)
+[11-06 09:30:04] BUILD PTFE+PFBS
+[11-06 10:29:20] [1/20] PTFE+PFBS s1: IE=-25.7 kJ/mol (3467s)
+[11-06 11:51:04] [2/20] PTFE+PFBS s2: IE=-24.0 kJ/mol (4905s)
+[11-06 13:13:51] [3/20] PTFE+PFBS s3: IE=-23.5 kJ/mol (4966s)
+[11-06 14:16:26] [4/20] PTFE+PFBS s4: IE=-21.7 kJ/mol (3756s)
+[11-06 15:13:14] [5/20] PTFE+PFBS s5: IE=-31.1 kJ/mol (3408s)
+[11-06 15:13:14] BUILD PTFE+FTOH62
+[11-06 16:30:59] [6/20] PTFE+FTOH62 s1: IE=-53.5 kJ/mol (4619s)
+[11-06 17:04:44] [7/20] PTFE+FTOH62 s2: IE=-49.6 kJ/mol (2025s)
+[11-06 17:57:37] [8/20] PTFE+FTOH62 s3: IE=-35.1 kJ/mol (3172s)
+[11-06 18:29:10] [9/20] PTFE+FTOH62 s4: IE=-82.1 kJ/mol (1893s)
+[11-06 19:38:57] [10/20] PTFE+FTOH62 s5: IE=-47.9 kJ/mol (4188s)
+[11-06 19:38:57] BUILD PVDF+PFBS
+[11-06 21:04:55] [11/20] PVDF+PFBS s1: IE=-50.7 kJ/mol (4979s)
+[11-06 22:28:06] [12/20] PVDF+PFBS s2: IE=-47.8 kJ/mol (4990s)
+[11-06 23:29:05] [13/20] PVDF+PFBS s3: IE=-41.6 kJ/mol (3659s)
+[11-07 00:52:29] [14/20] PVDF+PFBS s4: IE=-40.8 kJ/mol (5004s)
+[11-07 02:15:39] [15/20] PVDF+PFBS s5: IE=-42.8 kJ/mol (4990s)
+[11-07 02:15:39] BUILD PVDF+FTOH62
+[11-07 03:42:25] [16/20] PVDF+FTOH62 s1: IE=-64.1 kJ/mol (5029s)
+[11-07 05:05:42] [17/20] PVDF+FTOH62 s2: IE=-74.2 kJ/mol (4997s)
+[11-07 06:29:11] [18/20] PVDF+FTOH62 s3: IE=-65.9 kJ/mol (5009s)
+[11-07 07:52:42] [19/20] PVDF+FTOH62 s4: IE=-55.0 kJ/mol (5011s)
+[11-07 09:15:42] [20/20] PVDF+FTOH62 s5: IE=-75.8 kJ/mol (4980s)
+[11-07 09:15:42] BATCH DONE
+[11-08 23:48:43] BATCH START: 10 runs (2x1x5)
+[11-08 23:48:43] BUILD ECTFE+PFOA
+[11-08 23:48:43] SLAB ECTFE: packing 42 chains into 3.6 x 3.6 x 15.80 nm
+[11-08 23:52:00] packmol exit 173; output present, continuing
+[11-08 23:54:41] SLAB ECTFE: cmp1 (300 K, 1.0 ns) -> z = 3.83 nm
+[11-09 00:00:40] SLAB ECTFE: cmp2 (500 K, 2.0 ns) -> z = 4.00 nm
+[11-09 00:09:02] SLAB ECTFE: cmp3 (300 K, 3.0 ns) -> z = 3.47 nm
+[11-09 00:12:48] SLAB ECTFE: cmp4 (300 K, 1.0 ns) -> z = 3.50 nm
+[11-09 00:12:48] SLAB ECTFE: last 1 ns drift = 0.9% (수렴)
+[11-09 00:12:48] SLAB ECTFE: z 16.20 -> 3.50 nm, rho = 1.44 g/cm3 (amorphous ref 1.55, 93%)
+[11-09 00:46:11] [1/10] ECTFE+PFOA s1: IE=-56.4 kJ/mol (1948s)
+[11-09 02:05:30] [2/10] ECTFE+PFOA s2: IE=-70.3 kJ/mol (4759s)
+[11-09 03:28:51] [3/10] ECTFE+PFOA s3: IE=-58.8 kJ/mol (5001s)
+[11-09 04:57:29] [4/10] ECTFE+PFOA s4: IE=-67.3 kJ/mol (5318s)
+[11-09 06:22:07] [5/10] ECTFE+PFOA s5: IE=-74.0 kJ/mol (5078s)
+[11-09 06:22:07] BUILD PE+PFOA
+[11-09 06:22:07] SLAB PE: packing 65 chains into 3.6 x 3.6 x 17.30 nm
+[11-09 06:34:26] SLAB PE: cmp1 (300 K, 1.0 ns) -> z = 3.58 nm
+[11-09 07:01:07] SLAB PE: cmp2 (500 K, 2.0 ns) -> z = 4.57 nm
+[11-09 07:40:44] SLAB PE: cmp3 (300 K, 3.0 ns) -> z = 3.60 nm
+[11-09 07:53:55] SLAB PE: cmp4 (300 K, 1.0 ns) -> z = 3.61 nm
+[11-09 07:53:55] SLAB PE: last 1 ns drift = 0.5% (수렴)
+[11-09 07:53:55] SLAB PE: z 17.70 -> 3.61 nm, rho = 0.79 g/cm3 (amorphous ref 0.85, 92%)
+[11-09 09:27:30] [6/10] PE+PFOA s1: IE=-69.0 kJ/mol (5419s)
+[11-09 10:57:52] [7/10] PE+PFOA s2: IE=-68.7 kJ/mol (5422s)
+[11-09 12:28:04] [8/10] PE+PFOA s3: IE=-69.5 kJ/mol (5412s)
+[11-09 14:00:47] [9/10] PE+PFOA s4: IE=-47.3 kJ/mol (5563s)
+[11-09 15:31:12] [10/10] PE+PFOA s5: IE=-76.4 kJ/mol (5425s)
+[11-09 15:31:12] BATCH DONE
+[11-11 14:02:42] BATCH START: 20 runs (2x2x5)
+[11-11 14:02:42] BUILD ECTFE+PFBS
+[11-11 14:27:47] [1/20] ECTFE+PFBS s1: IE=-69.5 kJ/mol (1428s)
+[11-11 14:49:57] [2/20] ECTFE+PFBS s2: IE=-47.0 kJ/mol (1330s)
+[11-11 15:12:03] [3/20] ECTFE+PFBS s3: IE=-42.3 kJ/mol (1326s)
+[11-11 15:51:46] [4/20] ECTFE+PFBS s4: IE=-39.1 kJ/mol (2383s)
+[11-11 16:20:30] [5/20] ECTFE+PFBS s5: IE=-38.2 kJ/mol (1724s)
+[11-11 16:20:30] BUILD ECTFE+FTOH62
+[11-11 16:43:33] [6/20] ECTFE+FTOH62 s1: IE=-60.0 kJ/mol (1335s)
+[11-11 17:05:42] [7/20] ECTFE+FTOH62 s2: IE=-4.3 kJ/mol (1330s)
+[11-11 17:27:16] [8/20] ECTFE+FTOH62 s3: IE=-56.1 kJ/mol (1293s)
+[11-11 17:49:11] [9/20] ECTFE+FTOH62 s4: IE=-68.6 kJ/mol (1315s)
+[11-11 18:13:18] [10/20] ECTFE+FTOH62 s5: IE=-60.7 kJ/mol (1447s)
+[11-11 18:13:18] BUILD PE+PFBS
+[11-11 18:48:33] [11/20] PE+PFBS s1: IE=-45.5 kJ/mol (1925s)
+[11-11 19:46:24] [12/20] PE+PFBS s2: IE=-47.9 kJ/mol (3471s)
+[11-11 20:23:27] [13/20] PE+PFBS s3: IE=-44.6 kJ/mol (2223s)
+[11-11 21:53:29] [14/20] PE+PFBS s4: IE=-45.5 kJ/mol (5402s)
+[11-11 22:48:10] [15/20] PE+PFBS s5: IE=-47.9 kJ/mol (3281s)
+[11-11 22:48:10] BUILD PE+FTOH62
+[11-11 23:13:42] [16/20] PE+FTOH62 s1: IE=-65.7 kJ/mol (1480s)
+[11-11 23:38:45] [17/20] PE+FTOH62 s2: IE=-73.8 kJ/mol (1503s)
+[11-12 00:03:12] [18/20] PE+FTOH62 s3: IE=-71.1 kJ/mol (1467s)
+[11-12 00:28:29] [19/20] PE+FTOH62 s4: IE=-75.5 kJ/mol (1517s)
+[11-12 01:26:54] [20/20] PE+FTOH62 s5: IE=-90.2 kJ/mol (3505s)
+[11-12 01:26:54] BATCH DONE
+[11-12 01:26:55] BATCH START: 20 runs (4x1x5)
+[11-12 01:26:55] BUILD PTFE+GenX
+[11-12 02:53:25] [1/20] PTFE+GenX s1: IE=-30.2 kJ/mol (5009s)
+[11-12 04:13:36] [2/20] PTFE+GenX s2: IE=-43.3 kJ/mol (4811s)
+[11-12 05:35:46] [3/20] PTFE+GenX s3: IE=-34.2 kJ/mol (4929s)
+[11-12 06:58:01] [4/20] PTFE+GenX s4: IE=-34.9 kJ/mol (4936s)
+[11-12 08:19:14] [5/20] PTFE+GenX s5: IE=-31.9 kJ/mol (4873s)
+[11-12 08:19:14] BUILD PVDF+GenX
+[11-12 09:14:01] [6/20] PVDF+GenX s1: IE=-50.4 kJ/mol (3105s)
+[11-12 09:51:31] [7/20] PVDF+GenX s2: IE=-55.2 kJ/mol (2251s)
+[11-12 10:14:28] [8/20] PVDF+GenX s3: IE=-0.5 kJ/mol (1376s)
+[11-12 11:10:44] [9/20] PVDF+GenX s4: IE=-51.9 kJ/mol (3376s)
+[11-12 11:33:17] [10/20] PVDF+GenX s5: IE=-23.1 kJ/mol (1353s)
+[11-12 11:33:17] BUILD ECTFE+GenX
+[11-12 11:56:04] [11/20] ECTFE+GenX s1: IE=-45.6 kJ/mol (1319s)
+[11-12 12:18:27] [12/20] ECTFE+GenX s2: IE=-51.5 kJ/mol (1343s)
+[11-12 13:08:03] [13/20] ECTFE+GenX s3: IE=-66.4 kJ/mol (2975s)
+[11-12 14:31:24] [14/20] ECTFE+GenX s4: IE=-47.3 kJ/mol (5002s)
+[11-12 14:54:52] [15/20] ECTFE+GenX s5: IE=-41.0 kJ/mol (1408s)
+[11-12 14:54:52] BUILD PE+GenX
+[11-12 15:21:12] [16/20] PE+GenX s1: IE=-54.2 kJ/mol (1519s)
+[11-12 15:53:19] BATCH START: 20 runs (2x2x5)
+[11-12 15:53:19] skip ECTFE+PFBS (done)
+[11-12 15:53:19] skip ECTFE+FTOH62 (done)
+[11-12 15:53:19] skip PE+PFBS (done)
+[11-12 15:53:19] skip PE+FTOH62 (done)
+[11-12 15:53:19] BATCH DONE
+[11-12 15:53:19] BATCH START: 20 runs (4x1x5)
+[11-12 15:53:19] skip PTFE+GenX (done)
+[11-12 15:53:19] skip PVDF+GenX (done)
+[11-12 15:53:19] skip ECTFE+GenX (done)
+[11-12 15:53:19] BUILD PE+GenX
+[11-12 16:18:16] [16/20] PE+GenX s1: IE=-53.6 kJ/mol (1444s)
+[11-12 16:45:15] [17/20] PE+GenX s2: IE=-51.3 kJ/mol (1619s)
+[11-12 17:10:13] [18/20] PE+GenX s3: IE=-53.7 kJ/mol (1499s)
+[11-12 17:36:04] [19/20] PE+GenX s4: IE=-47.0 kJ/mol (1551s)
+[11-12 18:01:26] [20/20] PE+GenX s5: IE=-53.3 kJ/mol (1522s)
+[11-12 18:01:26] BATCH DONE

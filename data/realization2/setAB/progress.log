@@ -1,0 +1,55 @@
+[11-06 09:30:04] BATCH START: 20 runs (2x2x5)
+[11-06 09:30:04] BUILD PTFE+PFBS
+[11-06 10:29:20] [1/20] PTFE+PFBS s1: IE=-25.7 kJ/mol (3467s)
+[11-06 11:51:04] [2/20] PTFE+PFBS s2: IE=-24.0 kJ/mol (4905s)
+[11-06 13:13:51] [3/20] PTFE+PFBS s3: IE=-23.5 kJ/mol (4966s)
+[11-06 14:16:26] [4/20] PTFE+PFBS s4: IE=-21.7 kJ/mol (3756s)
+[11-06 15:13:14] [5/20] PTFE+PFBS s5: IE=-31.1 kJ/mol (3408s)
+[11-06 15:13:14] BUILD PTFE+FTOH62
+[11-06 16:30:59] [6/20] PTFE+FTOH62 s1: IE=-53.5 kJ/mol (4619s)
+[11-06 17:04:44] [7/20] PTFE+FTOH62 s2: IE=-49.6 kJ/mol (2025s)
+[11-06 17:57:37] [8/20] PTFE+FTOH62 s3: IE=-35.1 kJ/mol (3172s)
+[11-06 18:29:10] [9/20] PTFE+FTOH62 s4: IE=-82.1 kJ/mol (1893s)
+[11-06 19:38:57] [10/20] PTFE+FTOH62 s5: IE=-47.9 kJ/mol (4188s)
+[11-06 19:38:57] BUILD PVDF+PFBS
+[11-06 21:04:55] [11/20] PVDF+PFBS s1: IE=-50.7 kJ/mol (4979s)
+[11-06 22:28:06] [12/20] PVDF+PFBS s2: IE=-47.8 kJ/mol (4990s)
+[11-06 23:29:05] [13/20] PVDF+PFBS s3: IE=-41.6 kJ/mol (3659s)
+[11-07 00:52:29] [14/20] PVDF+PFBS s4: IE=-40.8 kJ/mol (5004s)
+[11-07 02:15:39] [15/20] PVDF+PFBS s5: IE=-42.8 kJ/mol (4990s)
+[11-07 02:15:39] BUILD PVDF+FTOH62
+[11-07 03:42:25] [16/20] PVDF+FTOH62 s1: IE=-64.1 kJ/mol (5029s)
+[11-07 05:05:42] [17/20] PVDF+FTOH62 s2: IE=-74.2 kJ/mol (4997s)
+[11-07 06:29:11] [18/20] PVDF+FTOH62 s3: IE=-65.9 kJ/mol (5009s)
+[11-07 07:52:42] [19/20] PVDF+FTOH62 s4: IE=-55.0 kJ/mol (5011s)
+[11-07 09:15:42] [20/20] PVDF+FTOH62 s5: IE=-75.8 kJ/mol (4980s)
+[11-07 09:15:42] BATCH DONE
+[11-08 23:48:43] BATCH START: 10 runs (2x1x5)
+[11-08 23:48:43] BUILD ECTFE+PFOA
+[11-08 23:48:43] SLAB ECTFE: packing 42 chains into 3.6 x 3.6 x 15.80 nm
+[11-08 23:52:00] packmol exit 173; output present, continuing
+[11-08 23:54:41] SLAB ECTFE: cmp1 (300 K, 1.0 ns) -> z = 3.83 nm
+[11-09 00:00:40] SLAB ECTFE: cmp2 (500 K, 2.0 ns) -> z = 4.00 nm
+[11-09 00:09:02] SLAB ECTFE: cmp3 (300 K, 3.0 ns) -> z = 3.47 nm
+[11-09 00:12:48] SLAB ECTFE: cmp4 (300 K, 1.0 ns) -> z = 3.50 nm
+[11-09 00:12:48] SLAB ECTFE: last 1 ns drift = 0.9% (수렴)
+[11-09 00:12:48] SLAB ECTFE: z 16.20 -> 3.50 nm, rho = 1.44 g/cm3 (amorphous ref 1.55, 93%)
+[11-09 00:46:11] [1/10] ECTFE+PFOA s1: IE=-56.4 kJ/mol (1948s)
+[11-09 02:05:30] [2/10] ECTFE+PFOA s2: IE=-70.3 kJ/mol (4759s)
+[11-09 03:28:51] [3/10] ECTFE+PFOA s3: IE=-58.8 kJ/mol (5001s)
+[11-09 04:57:29] [4/10] ECTFE+PFOA s4: IE=-67.3 kJ/mol (5318s)
+[11-09 06:22:07] [5/10] ECTFE+PFOA s5: IE=-74.0 kJ/mol (5078s)
+[11-09 06:22:07] BUILD PE+PFOA
+[11-09 06:22:07] SLAB PE: packing 65 chains into 3.6 x 3.6 x 17.30 nm
+[11-09 06:34:26] SLAB PE: cmp1 (300 K, 1.0 ns) -> z = 3.58 nm
+[11-09 07:01:07] SLAB PE: cmp2 (500 K, 2.0 ns) -> z = 4.57 nm
+[11-09 07:40:44] SLAB PE: cmp3 (300 K, 3.0 ns) -> z = 3.60 nm
+[11-09 07:53:55] SLAB PE: cmp4 (300 K, 1.0 ns) -> z = 3.61 nm
+[11-09 07:53:55] SLAB PE: last 1 ns drift = 0.5% (수렴)
+[11-09 07:53:55] SLAB PE: z 17.70 -> 3.61 nm, rho = 0.79 g/cm3 (amorphous ref 0.85, 92%)
+[11-09 09:27:30] [6/10] PE+PFOA s1: IE=-69.0 kJ/mol (5419s)
+[11-09 10:57:52] [7/10] PE+PFOA s2: IE=-68.7 kJ/mol (5422s)
+[11-09 12:28:04] [8/10] PE+PFOA s3: IE=-69.5 kJ/mol (5412s)
+[11-09 14:00:47] [9/10] PE+PFOA s4: IE=-47.3 kJ/mol (5563s)
+[11-09 15:31:12] [10/10] PE+PFOA s5: IE=-76.4 kJ/mol (5425s)
+[11-09 15:31:12] BATCH DONE

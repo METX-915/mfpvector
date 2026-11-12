@@ -3,7 +3,7 @@ Usage: python3 pmf_from_report.py report.txt pmf.json"""
 import sys,re,json
 txt=open(sys.argv[1],encoding="utf-8").read(); P={}; cur=None
 for ln in txt.splitlines():
-    m=re.match(r"\s*(PTFE|PVDF|ECTFE|PE)_PFOA\s*$",ln)
+    m=re.match(r"\s*(PTFE|PVDF|ECTFE|PE)(?:_PFOA)?(?:_\d+_\d+)?\s*$",ln)
     if m: cur=m.group(1); P[cur]={"ns":5}; continue
     if cur is None: continue
     m=re.search(r"dG_ads\s*=\s*(-?\d+\.\d+)\s*\+/-\s*(\d+\.\d+)",ln)

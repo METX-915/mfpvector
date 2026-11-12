@@ -1,0 +1,62 @@
+{
+ "PTFE": {
+  "label": "PTFE",
+  "faces_nm2": 32.0,
+  "SASA_total_nm2": 46.21708940002071,
+  "C_area_frac": 0.0015242192916839886,
+  "C_exposed_per_nm2": 0.0625,
+  "F_area_frac": 0.9753471634319768,
+  "F_exposed_per_nm2": 20.4375,
+  "H_area_frac": 0.023128617276339344,
+  "H_exposed_per_nm2": 0.78125,
+  "area_weighted_mean_charge_e": -0.17603575584415743,
+  "positive_area_frac": 0.024652836568023334,
+  "area_weighted_mean_charge_pos_e": 0.1260549341470364,
+  "area_weighted_mean_charge_neg_e": -0.18367138825105242
+ },
+ "PVDF": {
+  "label": "PVDF",
+  "faces_nm2": 32.0,
+  "SASA_total_nm2": 40.996011590411776,
+  "C_area_frac": 0.0074870414544244675,
+  "C_exposed_per_nm2": 0.46875,
+  "F_area_frac": 0.6378350442270144,
+  "F_exposed_per_nm2": 10.78125,
+  "H_area_frac": 0.35467791431856116,
+  "H_exposed_per_nm2": 8.8125,
+  "area_weighted_mean_charge_e": -0.1133614276871156,
+  "positive_area_frac": 0.355291606241055,
+  "area_weighted_mean_charge_pos_e": 0.09949140618007032,
+  "area_weighted_mean_charge_neg_e": -0.23066225077196106
+ },
+ "ECTFE": {
+  "label": "ECTFE",
+  "faces_nm2": 32.0,
+  "SASA_total_nm2": 44.44579956222685,
+  "C_area_frac": 0.014151461676527064,
+  "C_exposed_per_nm2": 0.65625,
+  "Cl_area_frac": 0.25319053053006946,
+  "Cl_exposed_per_nm2": 3.9375,
+  "F_area_frac": 0.4294801557949348,
+  "F_exposed_per_nm2": 8.15625,
+  "H_area_frac": 0.3031778519984686,
+  "H_exposed_per_nm2": 9.28125,
+  "area_weighted_mean_charge_e": -0.10670862194033383,
+  "positive_area_frac": 0.30329106369188086,
+  "area_weighted_mean_charge_pos_e": 0.07859480460813062,
+  "area_weighted_mean_charge_neg_e": -0.18737483765079124
+ },
+ "PE": {
+  "label": "PE",
+  "faces_nm2": 32.0,
+  "SASA_total_nm2": 53.907467988890275,
+  "C_area_frac": 0.04032337021133755,
+  "C_exposed_per_nm2": 2.71875,
+  "H_area_frac": 0.9596766297886624,
+  "H_exposed_per_nm2": 28.21875,
+  "area_weighted_mean_charge_e": 0.03348163761280582,
+  "positive_area_frac": 0.9596766297886624,
+  "area_weighted_mean_charge_pos_e": 0.03844517234537493,
+  "area_weighted_mean_charge_neg_e": -0.08464807870370371
+ }
+}

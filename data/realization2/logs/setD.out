@@ -1,0 +1,11 @@
+[11-12 15:53:19] BATCH START: 20 runs (4x1x5)
+[11-12 15:53:19] skip PTFE+GenX (done)
+[11-12 15:53:19] skip PVDF+GenX (done)
+[11-12 15:53:19] skip ECTFE+GenX (done)
+[11-12 15:53:19] BUILD PE+GenX
+[11-12 16:18:16] [16/20] PE+GenX s1: IE=-53.6 kJ/mol (1444s)
+[11-12 16:45:15] [17/20] PE+GenX s2: IE=-51.3 kJ/mol (1619s)
+[11-12 17:10:13] [18/20] PE+GenX s3: IE=-53.7 kJ/mol (1499s)
+[11-12 17:36:04] [19/20] PE+GenX s4: IE=-47.0 kJ/mol (1551s)
+[11-12 18:01:26] [20/20] PE+GenX s5: IE=-53.3 kJ/mol (1522s)
+[11-12 18:01:26] BATCH DONE
