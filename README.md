@@ -3,7 +3,7 @@
 Data and analysis code for the manuscript
 
 > **Fluorine content does not set simulated PFAS sorption to fluoropolymer microplastics: free-energy anchors and a bound on an unquantified organofluorine pool**
-> HanYeol Nam, Yoon Jeong Jang, Ku Kang — CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
+> HanYeol Nam, Yoon Jeong Jang, Jin Yoo, Doo-Hee Lee, Ku Kang — CBRN Defense Research Institute, Republic of Korea Ministry of National Defense
 > Submitted to *Journal of Hazardous Materials* (2026-10)
 
 Canonical URL: <https://github.com/METX-915/mfpvector>. Archived at Zenodo — concept DOI (all versions)

@@ -15,6 +15,14 @@ authors:
     given-names: Yoon Jeong
     orcid: "https://orcid.org/0000-0002-5625-2528"
     affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"
+  - family-names: Yoo
+    given-names: Jin
+    orcid: "https://orcid.org/0000-0002-7738-8424"
+    affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"
+  - family-names: Lee
+    given-names: Doo-Hee
+    orcid: "https://orcid.org/0000-0002-5116-2064"
+    affiliation: "CBRN Defense Research Institute, Republic of Korea Ministry of National Defense"
   - family-names: Kang
     given-names: Ku
     orcid: "https://orcid.org/0000-0001-8739-218X"
@@ -22,7 +30,7 @@ authors:
 repository-code: "https://github.com/METX-915/mfpvector"
 license: MIT
 version: v1.0.1
-date-released: "2026-11-01"
+date-released: "2026-11-12"
 doi: 10.5281/zenodo.23838772
 keywords:
   - PFAS
