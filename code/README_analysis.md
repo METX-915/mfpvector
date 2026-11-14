@@ -31,5 +31,5 @@ Second slab realisation and charge-model test (SI Sections S11, S12; Tables S17,
     python code/charge_model/an2.py                                  # blocked statistics of both realisations
     python code/charge_model/tables.py                               # LaTeX rows of Tables S17, S18
 
-`code/charge_model/make_charges.py` (RDKit 2026.03.1) generates `data/charge_model/charges_alt.json`;
+`code/charge_model/make_charges.py` (RDKit 2026.09.2) generates `data/charge_model/charges_alt.json`;
 `code/charge_model/charge_sensitivity.py` re-evaluates the second-realisation trajectories with those charges (gmx mdrun -rerun).
